@@ -46,12 +46,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="scala" value="5" />
-          <entry key="txt" value="3" />
+          <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="Scala" value="5" />
         </counts>
       </usages-collector>
@@ -219,94 +219,6 @@
             <path>
               <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
               <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="akkaflow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="akkaflow" type="462c0819:PsiDirectoryNode" />
-              <item name="flownodes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="akkaflow" type="462c0819:PsiDirectoryNode" />
-              <item name="token" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="akkaflow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="akkaflow" type="462c0819:PsiDirectoryNode" />
-              <item name="flownodes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="akkaflow" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workflowengine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workflowengine" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -319,7 +231,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551458990188" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551459221606" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -422,12 +334,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551455274511</updated>
-      <workItem from="1551455276630" duration="3192000" />
+      <workItem from="1551455276630" duration="3453000" />
     </task>
+    <task id="LOCAL-00001" summary="dda">
+      <created>1551458892237</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551458892237</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial">
+      <created>1551459029867</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551459029867</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3192000" />
+    <option name="totallyTimeSpent" value="3453000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,7 +367,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="833" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -484,6 +410,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dda" />
+    <MESSAGE value="initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build.sbt">
