@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: de.odysseus.juel:juel-impl:2.2.7:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/de.odysseus.juel/juel-impl/jars/juel-impl-2.2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/de.odysseus.juel/juel-impl/srcs/juel-impl-2.2.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

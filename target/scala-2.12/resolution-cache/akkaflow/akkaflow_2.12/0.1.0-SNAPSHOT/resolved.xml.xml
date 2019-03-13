@@ -4,7 +4,7 @@
 		module="akkaflow_2.12"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190301164852"
+		publication="20190307164755"
 	>
 		<description>
 		akkaflow
@@ -32,8 +32,11 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.8" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="org.activiti" name="activiti-bpmn-model" rev="5.12.1" conf="compile->default(compile)"/>
-		<dependency org="org.activiti" name="activiti-bpmn-converter" rev="5.12.1" conf="compile->default(compile)"/>
+		<dependency org="org.activiti" name="activiti-bpmn-model" rev="7-201802-EA" conf="compile->default(compile)"/>
+		<dependency org="org.activiti" name="activiti-bpmn-converter" rev="7-201802-EA" conf="compile->default(compile)"/>
+		<dependency org="de.odysseus.juel" name="juel-spi" rev="2.2.7" conf="compile->default(compile)"/>
+		<dependency org="de.odysseus.juel" name="juel-api" rev="2.2.7" conf="compile->default(compile)"/>
+		<dependency org="de.odysseus.juel" name="juel-impl" rev="2.2.7" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="2.5.21" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-agent_2.12" rev="2.5.21" conf="compile->default(compile)"/>
 		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.5" conf="compile->default(compile)"/>

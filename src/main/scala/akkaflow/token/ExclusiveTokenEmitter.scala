@@ -1,6 +1,8 @@
 package akkaflow.token
 
 import akka.actor._
+import de.odysseus.el.ExpressionFactoryImpl
+import de.odysseus.el.util.SimpleContext
 import org.activiti.bpmn.model.{Gateway, SequenceFlow}
 
 import scala.collection.JavaConverters.asScalaBufferConverter
@@ -26,7 +28,12 @@ trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
   def evaluateCondition(flow: SequenceFlow) = flow.getConditionExpression match {
     case null => false // This is an unconditional flow
     case conditionExpression => {
-      conditionExpression.toBoolean // TODO
+      val factory = new ExpressionFactoryImpl
+      val context = new SimpleContext
+      context.setVariable("input", factory.createValueExpression(530, java.lang.Integer.TYPE))
+      val e = factory.createValueExpression(context, conditionExpression, java.lang.Boolean.TYPE)
+      e.getValue(context) == true
+//      conditionExpression.toBoolean
     }
   }
 

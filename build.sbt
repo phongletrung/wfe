@@ -3,8 +3,12 @@ scalaVersion := "2.12.8"
 name := "akkaflow"
 
 libraryDependencies ++= Seq(
-  "org.activiti" % "activiti-bpmn-model" % "5.12.1",
-  "org.activiti" % "activiti-bpmn-converter" % "5.12.1",
+  "org.activiti" % "activiti-bpmn-model" %  "7-201802-EA",
+  "org.activiti" % "activiti-bpmn-converter" % "7-201802-EA",
+  "de.odysseus.juel" % "juel-spi" % "2.2.7",
+  "de.odysseus.juel" % "juel-api" % "2.2.7",
+  "de.odysseus.juel" % "juel-impl" % "2.2.7",
+
   "com.typesafe.akka" %% "akka-actor" % "2.5.21",
   "com.typesafe.akka" %% "akka-agent" % "2.5.21",
   "org.slf4j" % "slf4j-api" % "1.7.5",

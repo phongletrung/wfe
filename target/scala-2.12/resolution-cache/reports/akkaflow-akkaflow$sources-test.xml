@@ -7,10 +7,10 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="test"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190301164853"/>
+		date="20190313132902"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.12.8" status="release" pubdate="20181204111524" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+			<revision name="2.12.8" status="release" pubdate="20181204111524" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
 				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2828" time="0" location="/Users/phongletrung/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.8/scala-reflect-2.12.8.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="0.1.0-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/"/>
@@ -22,7 +22,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalatest" name="scalatest_2.12">
-			<revision name="3.0.5" status="release" pubdate="20180129142347" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="13">
+			<revision name="3.0.5" status="release" pubdate="20180129142347" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="19">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="4732" time="0" location="/Users/phongletrung/.ivy2/cache/org.scalatest/scalatest_2.12/ivy-3.0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="3.0.5" rev-constraint-default="3.0.5" rev-constraint-dynamic="3.0.5" callerrev="0.1.0-SNAPSHOT"/>
@@ -34,7 +34,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scalactic" name="scalactic_2.12">
-			<revision name="3.0.5" status="release" pubdate="20180129142214" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+			<revision name="3.0.5" status="release" pubdate="20180129142214" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scalatest.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
 				<license name="the Apache License, ASL Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2967" time="0" location="/Users/phongletrung/.ivy2/cache/org.scalactic/scalactic_2.12/ivy-3.0.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="3.0.5" rev-constraint-default="3.0.5" rev-constraint-dynamic="3.0.5" callerrev="0.1.0-SNAPSHOT"/>
@@ -46,7 +46,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-agent_2.12">
-			<revision name="2.5.21" status="release" pubdate="20190213131514" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="7">
+			<revision name="2.5.21" status="release" pubdate="20190213131514" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="10">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3462" time="0" location="/Users/phongletrung/.ivy2/cache/com.typesafe.akka/akka-agent_2.12/ivy-2.5.21.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-agent_2.12/2.5.21/akka-agent_2.12-2.5.21.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.5.21" rev-constraint-default="2.5.21" rev-constraint-dynamic="2.5.21" callerrev="0.1.0-SNAPSHOT" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21"/>
@@ -58,7 +58,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-stm" name="scala-stm_2.12">
-			<revision name="0.9" status="release" pubdate="20181203211626" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://nbronson.github.com/scala-stm/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+			<revision name="0.9" status="release" pubdate="20181203211626" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://nbronson.github.com/scala-stm/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
 				<license name="BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License" url="https://spdx.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="2697" time="0" location="/Users/phongletrung/.ivy2/cache/org.scala-stm/scala-stm_2.12/ivy-0.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.12/0.9/scala-stm_2.12-0.9.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="0.9" rev-constraint-default="0.9" rev-constraint-dynamic="0.9" callerrev="0.1.0-SNAPSHOT"/>
@@ -70,7 +70,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-testkit_2.12">
-			<revision name="2.5.21" status="release" pubdate="20190213131200" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="14">
+			<revision name="2.5.21" status="release" pubdate="20190213131200" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="20">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3699" time="0" location="/Users/phongletrung/.ivy2/cache/com.typesafe.akka/akka-testkit_2.12/ivy-2.5.21.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-testkit_2.12/2.5.21/akka-testkit_2.12-2.5.21.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.5.21" rev-constraint-default="2.5.21" rev-constraint-dynamic="2.5.21" callerrev="0.1.0-SNAPSHOT" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21"/>
@@ -82,7 +82,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.akka" name="akka-actor_2.12">
-			<revision name="2.5.21" status="release" pubdate="20190213130930" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="11">
+			<revision name="2.5.21" status="release" pubdate="20190213130930" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="16">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3102" time="0" location="/Users/phongletrung/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/ivy-2.5.21.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.12/2.5.21/akka-actor_2.12-2.5.21.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.5.21" rev-constraint-default="2.5.21" rev-constraint-dynamic="2.5.21" callerrev="0.1.0-SNAPSHOT" extra-info.apiURL="http://doc.akka.io/api/akka/2.5.21"/>
@@ -94,7 +94,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-java8-compat_2.12">
-			<revision name="0.8.0" status="release" pubdate="20161030001227" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+			<revision name="0.8.0" status="release" pubdate="20161030001227" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="3036" time="0" location="/Users/phongletrung/.ivy2/cache/org.scala-lang.modules/scala-java8-compat_2.12/ivy-0.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.12/0.8.0/scala-java8-compat_2.12-0.8.0.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="0.8.0" rev-constraint-default="0.8.0" rev-constraint-dynamic="0.8.0" callerrev="0.1.0-SNAPSHOT"/>
@@ -106,7 +106,7 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe" name="config">
-			<revision name="1.3.3" status="release" pubdate="20180221150821" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lightbend/config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+			<revision name="1.3.3" status="release" pubdate="20180221150821" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lightbend/config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
 				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2874" time="0" location="/Users/phongletrung/.ivy2/cache/com.typesafe/config/ivy-1.3.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/config/1.3.3/config-1.3.3.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="1.3.3" rev-constraint-default="1.3.3" rev-constraint-dynamic="1.3.3" callerrev="0.1.0-SNAPSHOT"/>
@@ -117,8 +117,139 @@
 				</artifacts>
 			</revision>
 		</module>
+		<module organisation="de.odysseus.juel" name="juel-impl">
+			<revision name="2.2.7" status="release" pubdate="20140206143345" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="9">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3486" time="0" location="/Users/phongletrung/.ivy2/cache/de.odysseus.juel/juel-impl/ivy-2.2.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/de/odysseus/juel/juel-impl/2.2.7/juel-impl-2.2.7.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.2.7" rev-constraint-default="2.2.7" rev-constraint-dynamic="2.2.7" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="juel-impl" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="69022" time="0" location="/Users/phongletrung/.ivy2/cache/de.odysseus.juel/juel-impl/srcs/juel-impl-2.2.7-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/de/odysseus/juel/juel-impl/2.2.7/juel-impl-2.2.7-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="de.odysseus.juel" name="juel-api">
+			<revision name="2.2.7" status="release" pubdate="20140206143310" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="17">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3337" time="0" location="/Users/phongletrung/.ivy2/cache/de.odysseus.juel/juel-api/ivy-2.2.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/de/odysseus/juel/juel-api/2.2.7/juel-api-2.2.7.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.2.7" rev-constraint-default="2.2.7" rev-constraint-dynamic="2.2.7" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="juel-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="47973" time="0" location="/Users/phongletrung/.ivy2/cache/de.odysseus.juel/juel-api/srcs/juel-api-2.2.7-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/de/odysseus/juel/juel-api/2.2.7/juel-api-2.2.7-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.activiti" name="activiti-bpmn-converter">
+			<revision name="7-201802-EA" status="release" pubdate="20180320143318" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="5">
+				<license name="Apache v2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="138723" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-converter/ivy-7-201802-EA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/activiti/activiti-bpmn-converter/7-201802-EA/activiti-bpmn-converter-7-201802-EA.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="7-201802-EA" rev-constraint-default="7-201802-EA" rev-constraint-dynamic="7-201802-EA" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="activiti-bpmn-converter" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="163707" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-converter/srcs/activiti-bpmn-converter-7-201802-EA-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/activiti/activiti-bpmn-converter/7-201802-EA/activiti-bpmn-converter-7-201802-EA-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jcl-over-slf4j">
+			<revision name="1.7.25" status="release" pubdate="20170316173729" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="5267" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/jcl-over-slf4j/ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jcl-over-slf4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="23239" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/jcl-over-slf4j/srcs/jcl-over-slf4j-1.7.25-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.25" status="release" pubdate="20170316173632" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="6">
+				<metadata-artifact status="no" details="" size="5287" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.25.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="1.7.25" rev-constraint-default="1.7.25" rev-constraint-dynamic="1.7.25" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="55539" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.25-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.activiti" name="activiti-bpmn-model">
+			<revision name="7-201802-EA" status="release" pubdate="20180320143236" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="12">
+				<license name="Apache v2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="137765" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-model/ivy-7-201802-EA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/activiti/activiti-bpmn-model/7-201802-EA/activiti-bpmn-model-7-201802-EA.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="7-201802-EA" rev-constraint-default="7-201802-EA" rev-constraint-dynamic="7-201802-EA" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="activiti-bpmn-model" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="77061" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-model/srcs/activiti-bpmn-model-7-201802-EA-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/activiti/activiti-bpmn-model/7-201802-EA/activiti-bpmn-model-7-201802-EA-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
+			<revision name="2.9.4" status="release" pubdate="20180124050748" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="22645" time="0" location="/Users/phongletrung/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.9.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.9.4" rev-constraint-default="2.9.4" rev-constraint-dynamic="2.9.4" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jackson-databind" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="990942" time="0" location="/Users/phongletrung/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/srcs/jackson-databind-2.9.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.4/jackson-databind-2.9.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
+			<revision name="2.9.0" status="release" pubdate="20170730055340" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6969" time="0" location="/Users/phongletrung/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.9.0" rev-constraint-default="2.9.0" rev-constraint-dynamic="2.9.0" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jackson-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="68177" time="0" location="/Users/phongletrung/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/srcs/jackson-annotations-2.9.0-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.7" status="release" pubdate="20171104191619" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+				<license name="Apache License, Version 2.0" url="https://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="13273" time="0" location="/Users/phongletrung/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="3.7" rev-constraint-default="3.7" rev-constraint-dynamic="3.7" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="550341" time="0" location="/Users/phongletrung/.ivy2/cache/org.apache.commons/commons-lang3/srcs/commons-lang3-3.7-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.7/commons-lang3-3.7-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.9.9" status="release" pubdate="20170323143313" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6647" time="0" location="/Users/phongletrung/.ivy2/cache/joda-time/joda-time/ivy-2.9.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="joda-time" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="778815" time="0" location="/Users/phongletrung/.ivy2/cache/joda-time/joda-time/srcs/joda-time-2.9.9-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
+			<revision name="2.9.4" status="release" pubdate="20180124041418" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="21933" time="0" location="/Users/phongletrung/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.9.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4.pom"/>
+				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.9.4" rev-constraint-default="2.9.4" rev-constraint-dynamic="2.9.4" callerrev="0.1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="jackson-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="332697" time="0" location="/Users/phongletrung/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/srcs/jackson-core-2.9.4-sources.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.4/jackson-core-2.9.4-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 		<module organisation="org.scala-lang.modules" name="scala-xml_2.12">
-			<revision name="1.1.1" status="release" pubdate="20180926193248" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="4">
+			<revision name="1.1.1" status="release" pubdate="20180926193248" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="2">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
 				<metadata-artifact status="no" details="" size="3266" time="0" location="/Users/phongletrung/.ivy2/cache/org.scala-lang.modules/scala-xml_2.12/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.12/1.1.1/scala-xml_2.12-1.1.1.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.1.0-SNAPSHOT"/>
@@ -130,7 +261,7 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-simple">
-			<revision name="1.7.5" status="release" pubdate="20130325215226" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+			<revision name="1.7.5" status="release" pubdate="20130325215226" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
 				<metadata-artifact status="no" details="" size="4427" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/slf4j-simple/ivy-1.7.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="0.1.0-SNAPSHOT"/>
@@ -141,74 +272,14 @@
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.7.5" status="release" pubdate="20130325215215" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="8">
-				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="4383" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom"/>
-				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="0.1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="slf4j-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="47186" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/slf4j-api/srcs/slf4j-api-1.7.5-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.12.8" status="release" pubdate="20181204111556" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="2">
+			<revision name="2.12.8" status="release" pubdate="20181204111556" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
 				<license name="Apache-2.0" url="https://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2656" time="0" location="/Users/phongletrung/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8.pom"/>
 				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.12.8" rev-constraint-default="2.12.8" rev-constraint-dynamic="2.12.8" callerrev="0.1.0-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.12.8/"/>
 				<artifacts>
 					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1020924" time="0" location="/Users/phongletrung/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.8/scala-library-2.12.8-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.activiti" name="activiti-bpmn-converter">
-			<revision name="5.12.1" status="release" pubdate="20130415165619" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
-				<license name="Apache v2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="21304" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-converter/ivy-5.12.1.xml" searched="false" origin-is-local="false" origin-location="https://maven.alfresco.com/nexus/content/groups/public/org/activiti/activiti-bpmn-converter/5.12.1/activiti-bpmn-converter-5.12.1.pom"/>
-				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="5.12.1" rev-constraint-default="5.12.1" rev-constraint-dynamic="5.12.1" callerrev="0.1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="activiti-bpmn-converter" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="119694" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-converter/srcs/activiti-bpmn-converter-5.12.1-sources.jar">
-						<origin-location is-local="false" location="https://maven.alfresco.com/nexus/content/groups/public/org/activiti/activiti-bpmn-converter/5.12.1/activiti-bpmn-converter-5.12.1-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.activiti" name="activiti-bpmn-model">
-			<revision name="5.12.1" status="release" pubdate="20130415165606" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="5">
-				<license name="Apache v2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="20465" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-model/ivy-5.12.1.xml" searched="false" origin-is-local="false" origin-location="https://maven.alfresco.com/nexus/content/groups/public/org/activiti/activiti-bpmn-model/5.12.1/activiti-bpmn-model-5.12.1.pom"/>
-				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="5.12.1" rev-constraint-default="5.12.1" rev-constraint-dynamic="5.12.1" callerrev="0.1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="activiti-bpmn-model" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="52853" time="0" location="/Users/phongletrung/.ivy2/cache/org.activiti/activiti-bpmn-model/srcs/activiti-bpmn-model-5.12.1-sources.jar">
-						<origin-location is-local="false" location="https://maven.alfresco.com/nexus/content/groups/public/org/activiti/activiti-bpmn-model/5.12.1/activiti-bpmn-model-5.12.1-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="commons-lang" name="commons-lang">
-			<revision name="2.4" status="release" pubdate="20080319064228" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4885" time="0" location="/Users/phongletrung/.ivy2/cache/commons-lang/commons-lang/ivy-2.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.4/commons-lang-2.4.pom"/>
-				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="2.4" rev-constraint-default="2.4" rev-constraint-dynamic="2.4" callerrev="0.1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="commons-lang" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="339321" time="0" location="/Users/phongletrung/.ivy2/cache/commons-lang/commons-lang/srcs/commons-lang-2.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.4/commons-lang-2.4-sources.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
-		<module organisation="org.slf4j" name="jcl-over-slf4j">
-			<revision name="1.7.2" status="release" pubdate="20121011205647" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="0">
-				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="4559" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/jcl-over-slf4j/ivy-1.7.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.2/jcl-over-slf4j-1.7.2.pom"/>
-				<caller organisation="akkaflow" name="akkaflow$sources" conf="test, compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="0.1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="jcl-over-slf4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="23022" time="0" location="/Users/phongletrung/.ivy2/cache/org.slf4j/jcl-over-slf4j/srcs/jcl-over-slf4j-1.7.2-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.2/jcl-over-slf4j-1.7.2-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
