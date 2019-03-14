@@ -8,6 +8,7 @@ libraryDependencies ++= Seq(
   "de.odysseus.juel" % "juel-spi" % "2.2.7",
   "de.odysseus.juel" % "juel-api" % "2.2.7",
   "de.odysseus.juel" % "juel-impl" % "2.2.7",
+  "org.camunda.bpm.model" % "camunda-bpmn-model" % "7.10.0",
 
   "com.typesafe.akka" %% "akka-actor" % "2.5.21",
   "com.typesafe.akka" %% "akka-agent" % "2.5.21",

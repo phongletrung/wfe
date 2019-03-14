@@ -43,6 +43,9 @@ object HelloWorld {
           cnt += 1
         }
       )
+//      process1.getFlowElement().forEach(e =>
+//      if(e.con)
+//      )
       process1
     }
     val input = 1
@@ -101,36 +104,42 @@ object HelloWorld {
 //            <serviceTask id="servicetask1" name="Service Task" activiti:class={className}></serviceTask>
 //            <sequenceFlow id="flowPG2ST1" sourceRef="servicetask1" targetRef="endevent2"></sequenceFlow>
 //            <endEvent id="endevent2" name="End"></endEvent>
-//          </process>
-      <process id="myProcess" name="My process" isExecutable="true">
-
-        <startEvent id="theStart" />
-        <sequenceFlow id="flow1" sourceRef="theStart" targetRef="fork" />
-
-        <exclusiveGateway id="fork" />
-        <sequenceFlow sourceRef="fork" targetRef="receivePayment">
-          <conditionExpression xsi:type="tFormalExpression">true</conditionExpression>
-        </sequenceFlow>
-
-        <sequenceFlow sourceRef="fork" targetRef="theEnd2">
-          <conditionExpression xsi:type="tFormalExpression">false</conditionExpression>
-        </sequenceFlow>
+//          </
 
 
-      <serviceTask id="receivePayment" name="Receive Payment" activiti:class={className} />
-        <sequenceFlow sourceRef="receivePayment" targetRef="theEnd" />
+//      <process id="myProcess" name="My process" isExecutable="true">
+//
+//        <startEvent id="theStart" />
+//        <sequenceFlow id="flow1" sourceRef="theStart" targetRef="fork" />
+//        <exclusiveGateway id="fork" />
+//        <sequenceFlow sourceRef="fork" targetRef="receivePayment">
+//          <conditionExpression xsi:type="tFormalExpression">${{input == 1}}</conditionExpression>
+//        </sequenceFlow>
+//        <sequenceFlow sourceRef="fork" targetRef="theEnd2">
+//          <conditionExpression xsi:type="tFormalExpression">false</conditionExpression>
+//        </sequenceFlow>
+//      <serviceTask id="receivePayment" name="Receive Payment" activiti:class={className} />
+//        <sequenceFlow sourceRef="receivePayment" targetRef="theEnd" />
+//                <endEvent id="theEnd" />
+//        <endEvent id="theEnd2" />
+//
+//      <endEvent id="theEnd" />
+//      </process>
 
-
-
-
-        <endEvent id="theEnd" />
-        <endEvent id="theEnd2" />
-
-
-
-
-      <endEvent id="theEnd" />
+      <process id="Process_1" isExecutable="true">
+        <startEvent id="StartEvent_1">
+          <outgoing>SequenceFlow_1sufdm6</outgoing>
+        </startEvent>
+        <serviceTask id="Task_186tl9n" name="Receive Payment" activiti:class={className} />
+        <sequenceFlow id="SequenceFlow_1sufdm6" sourceRef="StartEvent_1" targetRef="Task_186tl9n" />
+        <endEvent id="EndEvent_074u7iy">
+          <incoming>SequenceFlow_0mym8rz</incoming>
+        </endEvent>
+        <sequenceFlow id="SequenceFlow_0mym8rz" sourceRef="Task_186tl9n" targetRef="EndEvent_074u7iy" />
       </process>
+
+
+
     val process1 = parseProcess(xml)
     val system = ActorSystem("bpmn")
     val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], process1), name = "process1")

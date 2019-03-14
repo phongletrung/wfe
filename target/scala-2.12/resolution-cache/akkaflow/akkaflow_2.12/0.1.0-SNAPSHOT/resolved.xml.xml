@@ -4,7 +4,7 @@
 		module="akkaflow_2.12"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190307164755"
+		publication="20190314130410"
 	>
 		<description>
 		akkaflow
@@ -37,6 +37,7 @@
 		<dependency org="de.odysseus.juel" name="juel-spi" rev="2.2.7" conf="compile->default(compile)"/>
 		<dependency org="de.odysseus.juel" name="juel-api" rev="2.2.7" conf="compile->default(compile)"/>
 		<dependency org="de.odysseus.juel" name="juel-impl" rev="2.2.7" conf="compile->default(compile)"/>
+		<dependency org="org.camunda.bpm.model" name="camunda-bpmn-model" rev="7.10.0" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="2.5.21" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-agent_2.12" rev="2.5.21" conf="compile->default(compile)"/>
 		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.5" conf="compile->default(compile)"/>

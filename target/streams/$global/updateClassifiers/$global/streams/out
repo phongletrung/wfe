@@ -226,6 +226,21 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default]
+[debug] sbt-chain: Checking cache for: dependency: org.camunda.bpm.model#camunda-bpmn-model;7.10.0 {compile=[default, compile, runtime, default(compile), master], runtime=[default, compile, runtime, default(compile), master], test=[default, compile, runtime, default(compile), master], compile-internal=[default, compile, runtime, default(compile), master], runtime-internal=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
+[debug] sbt-chain: module revision found in cache: org.camunda.bpm.model#camunda-bpmn-model;7.10.0
+[debug] 	found org.camunda.bpm.model#camunda-bpmn-model;7.10.0 in sbt-chain
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->default]
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.akka#akka-actor_2.12;2.5.21 {compile=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], compile-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master]}
 [debug] sbt-chain: module revision found in cache: com.typesafe.akka#akka-actor_2.12;2.5.21
@@ -261,6 +276,17 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] sbt-chain: Checking cache for: dependency: org.camunda.bpm.model#camunda-xml-model;7.10.0 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.camunda.bpm.model#camunda-xml-model;7.10.0
+[debug] 	found org.camunda.bpm.model#camunda-xml-model;7.10.0 in sbt-chain
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 {compile=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime=[compile, runtime(*), master(compile), runtime, compile(*), master], test=[compile, runtime(*), master(compile), runtime, compile(*), master], compile-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], runtime-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-java8-compat_2.12;0.8.0
@@ -447,6 +473,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->compile]
@@ -475,6 +513,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -655,6 +701,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->compile]
@@ -683,6 +741,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -871,6 +937,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->compile]
@@ -899,6 +977,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -1079,6 +1165,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->compile]
@@ -1107,6 +1205,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -1345,6 +1451,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test->compile]
@@ -1373,6 +1491,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
@@ -1560,6 +1686,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->compile]
@@ -1588,6 +1726,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -1770,6 +1916,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile-internal->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile-internal->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile-internal->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile-internal->compile]
@@ -1798,6 +1956,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile-internal->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile-internal->compile]
@@ -1982,6 +2148,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->compile]
@@ -2010,6 +2188,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -2190,6 +2376,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->compile]
@@ -2218,6 +2416,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -2399,6 +2605,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime-internal->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime-internal->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime-internal->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime-internal->compile]
@@ -2427,6 +2645,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime-internal->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime-internal->compile]
@@ -2612,6 +2838,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [compile->compile]
@@ -2640,6 +2878,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [compile->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [compile->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [compile->compile]
@@ -2820,6 +3066,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [runtime->compile]
@@ -2848,6 +3106,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [runtime->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [runtime->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [runtime->compile]
@@ -3072,6 +3338,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test->compile]
@@ -3100,6 +3378,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test->compile]
@@ -3326,6 +3612,18 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test-internal->compile(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-stm#scala-stm_2.12;0.9 [test-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->default]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->default(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-bpmn-model;7.10.0 [test-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test-internal->default]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test-internal->runtime]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->com.typesafe.akka#akka-actor_2.12;2.5.21 [test-internal->compile]
@@ -3354,6 +3652,14 @@
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->de.odysseus.juel#juel-api;2.2.7 [test-internal->master]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->runtime(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->master(compile)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->runtime]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->compile]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->compile(*)]
+[debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.camunda.bpm.model#camunda-xml-model;7.10.0 [test-internal->master]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test-internal->compile]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test-internal->runtime(*)]
 [debug] == resolving dependencies akkaflow#akkaflow$sources;0.1.0-SNAPSHOT->org.scala-lang.modules#scala-java8-compat_2.12;0.8.0 [test-internal->compile]
@@ -3425,128 +3731,46 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.8!scala-library.jar(src)
-[debug] no default ivy user dir defined: set to /Users/phongletrung/.ivy2
 [debug] 	[NOT REQUIRED] org.slf4j#slf4j-simple;1.7.5!slf4j-simple.jar(src)
-[debug] no default ivy user dir defined: set to /Users/phongletrung/.ivy2
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.1.1!scala-xml_2.12.jar(src)
-[debug] no default ivy user dir defined: set to /Users/phongletrung/.ivy2
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to /Users/phongletrung/.ivy2/cache
-[debug] no default cache defined: set to /Users/phongletrung/.ivy2/cache
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/phongletrung/.ivy2/cache
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.9.4!jackson-core.jar(src)
-[debug] no default ivy user dir defined: set to /Users/phongletrung/.ivy2
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.9!joda-time.jar(src)
-[debug] no default cache defined: set to /Users/phongletrung/.ivy2/cache
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default ivy user dir defined: set to /Users/phongletrung/.ivy2
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
 [debug] 	[NOT REQUIRED] org.activiti#activiti-bpmn-converter;7-201802-EA!activiti-bpmn-converter.jar(src)
-[debug] no default ivy user dir defined: set to /Users/phongletrung/.ivy2
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (133ms)
-[debug] 	default cache: /Users/phongletrung/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] no default cache defined: set to /Users/phongletrung/.ivy2/cache
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] settings loaded (136ms)
-[debug] 	default cache: /Users/phongletrung/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to /Users/phongletrung/.ivy2/cache
-[debug] settings loaded (33ms)
-[debug] 	default cache: /Users/phongletrung/.ivy2/cache
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/phongletrung/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (35ms)
-[debug] 	default cache: /Users/phongletrung/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (28ms)
-[debug] 	default cache: /Users/phongletrung/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.9.0!jackson-annotations.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.9.4!jackson-databind.jar(src)
 [debug] 	[NOT REQUIRED] de.odysseus.juel#juel-impl;2.2.7!juel-impl.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-agent_2.12;2.5.21!akka-agent_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.25!jcl-over-slf4j.jar(src)
 [debug] 	[NOT REQUIRED] org.activiti#activiti-bpmn-model;7-201802-EA!activiti-bpmn-model.jar(src)
-[debug] settings loaded (158ms)
-[debug] 	default cache: /Users/phongletrung/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.3!config.jar(src)
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
 [debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.7!commons-lang3.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.12;0.9!scala-stm_2.12.jar(src)
-[debug] 	[NOT REQUIRED] de.odysseus.juel#juel-api;2.2.7!juel-api.jar(src)
+[debug] 		tried /Users/phongletrung/.ivy2/local/org.camunda.bpm.model/camunda-bpmn-model/7.10.0/srcs/camunda-bpmn-model-sources.jar
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.5.21!akka-actor_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src)
+[debug] 	[NOT REQUIRED] de.odysseus.juel#juel-api;2.2.7!juel-api.jar(src)
+[debug] 		tried https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-bpmn-model/7.10.0/camunda-bpmn-model-7.10.0-sources.jar
+[debug] 		tried /Users/phongletrung/.ivy2/local/org.camunda.bpm.model/camunda-xml-model/7.10.0/srcs/camunda-xml-model-sources.jar
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
+[debug] 		tried https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-xml-model/7.10.0/camunda-xml-model-7.10.0-sources.jar
+[debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.12;2.5.21!akka-testkit_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
 [debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.8!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.8!scala-compiler.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
-[debug] :: resolution report :: resolve 1776ms :: artifacts dl 194ms
+[debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
+[info] downloading https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-xml-model/7.10.0/camunda-xml-model-7.10.0-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-xml-model/7.10.0/camunda-xml-model-7.10.0-sources.jar
+[info] downloading https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-bpmn-model/7.10.0/camunda-bpmn-model-7.10.0-sources.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-bpmn-model/7.10.0/camunda-bpmn-model-7.10.0-sources.jar
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-xml-model/7.10.0/camunda-xml-model-7.10.0-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-xml-model/7.10.0/camunda-xml-model-7.10.0-sources.jar
+[info] 	[SUCCESSFUL ] org.camunda.bpm.model#camunda-xml-model;7.10.0!camunda-xml-model.jar(src) (339ms)
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-bpmn-model/7.10.0/camunda-bpmn-model-7.10.0-sources.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/camunda/bpm/model/camunda-bpmn-model/7.10.0/camunda-bpmn-model-7.10.0-sources.jar
+[info] 	[SUCCESSFUL ] org.camunda.bpm.model#camunda-bpmn-model;7.10.0!camunda-bpmn-model.jar(src) (1043ms)
+[debug] :: resolution report :: resolve 607ms :: artifacts dl 1062ms
 [debug] 	report for akkaflow#akkaflow$sources;0.1.0-SNAPSHOT compile produced in /Users/phongletrung/Documents/workflowengine/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-compile.xml
 [debug] 	report for akkaflow#akkaflow$sources;0.1.0-SNAPSHOT runtime produced in /Users/phongletrung/Documents/workflowengine/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-runtime.xml
 [debug] 	report for akkaflow#akkaflow$sources;0.1.0-SNAPSHOT test produced in /Users/phongletrung/Documents/workflowengine/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-test.xml
@@ -3558,4 +3782,4 @@
 [debug] 	report for akkaflow#akkaflow$sources;0.1.0-SNAPSHOT plugin produced in /Users/phongletrung/Documents/workflowengine/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-plugin.xml
 [debug] 	report for akkaflow#akkaflow$sources;0.1.0-SNAPSHOT pom produced in /Users/phongletrung/Documents/workflowengine/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-pom.xml
 [debug] 	report for akkaflow#akkaflow$sources;0.1.0-SNAPSHOT scala-tool produced in /Users/phongletrung/Documents/workflowengine/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-scala-tool.xml
-[debug] 	resolve done (1776ms resolve - 194ms download)
+[debug] 	resolve done (607ms resolve - 1062ms download)
