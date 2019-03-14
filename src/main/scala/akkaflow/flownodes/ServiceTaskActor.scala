@@ -3,12 +3,12 @@ package akkaflow.flownodes
 import akka.actor._
 import akkaflow.IncomingToken
 import akkaflow.token.UnconditionalTokenEmitter
-import org.activiti.bpmn.model.ServiceTask
+import org.camunda.bpm.model.bpmn.instance.ServiceTask
 
 class ServiceTaskActor(val node: ServiceTask) extends Actor with ActorLogging with UnconditionalTokenEmitter {
-  assert(node.getImplementationType == "class", s"Service task implementation type must be 'class', but is '${node.getImplementationType}'")
-  val className = node.getImplementation
-  
+  assert(node.getCamundaClass != null, s"Service task implementation must not be null, but is '${node.getCamundaClass}'")
+  val className = node.getCamundaClass
+
   val delegate = Class.forName(className).getField("MODULE$").get(null).asInstanceOf[Function0[Unit]]
   def receive = {
     case IncomingToken(token, _) => {

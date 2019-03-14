@@ -1,9 +1,9 @@
 package akkaflow.flownodes
 
-import org.activiti.bpmn.model.EndEvent
 import akka.actor._
 import akkaflow.IncomingToken
 import akkaflow.token.UnconditionalTokenEmitter
+import org.camunda.bpm.model.bpmn.instance.EndEvent
 
 class EndEventActor(val node: EndEvent) extends Actor with ActorLogging with UnconditionalTokenEmitter {
   def receive = {

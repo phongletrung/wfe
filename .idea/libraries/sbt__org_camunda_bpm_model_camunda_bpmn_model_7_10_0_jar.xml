@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: org.camunda.bpm.model:camunda-bpmn-model:7.10.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.camunda.bpm.model/camunda-bpmn-model/jars/camunda-bpmn-model-7.10.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.camunda.bpm.model/camunda-bpmn-model/srcs/camunda-bpmn-model-7.10.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -5,7 +5,7 @@ import akkaflow.ProcessDefActor.StartProcess
 import akkaflow.flownodes.NodeActor
 import akkaflow.flownodes.NodeActor._
 import akkaflow.token.Token
-import org.activiti.bpmn.model.{FlowNode, Process, SequenceFlow, StartEvent}
+import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 
 import scala.collection.JavaConverters.collectionAsScalaIterableConverter
 
@@ -25,7 +25,7 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
   var variables: Map[String, Any] = Map()
 
   val flowNodeActors: Map[String, ActorRef] =
-    process.getFlowElements().asScala.collect {
+    process.getFlowElements.asScala.collect {
       case node: FlowNode => node.getId -> NodeActor(node, processInstanceId)
     }.toMap
     
@@ -39,15 +39,16 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
       }
     }
     case OutgoingToken(token, sequenceFlowRef) => {
-      val sequenceFlow = process.getFlowElement(sequenceFlowRef).asInstanceOf[SequenceFlow]
-      val targetNode = sequenceFlow.getTargetRef
+      val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
+      val targetNode = sequenceFlow.getTarget.getId
       val target = flowNodeActors(targetNode)
       tokens += token -> targetNode
       target ! IncomingToken(token, sequenceFlowRef)
     }
     case CreateToken(sequenceFlowRef) => {
-      val sequenceFlow = process.getFlowElement(sequenceFlowRef).asInstanceOf[SequenceFlow]
-      val targetNode = sequenceFlow.getTargetRef
+
+      val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
+      val targetNode = sequenceFlow.getTarget.getId
       val target = flowNodeActors(targetNode)
       val token = createToken()
       tokens += token -> targetNode
@@ -70,7 +71,7 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
     case GetVariables => sender ! variables
   }
 
-  def startNode = process.getFlowElements().asScala.find(_.isInstanceOf[StartEvent])
+  def startNode: Option[FlowElement] = process.getFlowElements.asScala.find(_.isInstanceOf[StartEvent])
 
   def createToken() = Token(generateTokenId)
 

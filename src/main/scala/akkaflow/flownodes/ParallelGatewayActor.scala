@@ -1,15 +1,15 @@
 package akkaflow.flownodes
 
-import scala.collection.JavaConverters.asScalaBufferConverter
-import org.activiti.bpmn.model.ParallelGateway
+import scala.collection.JavaConverters._
 import akka.actor._
 import akkaflow.IncomingToken
 import akkaflow.token.{Token, UnconditionalTokenEmitter}
+import org.camunda.bpm.model.bpmn.instance.ParallelGateway
 
 class ParallelGatewayActor(val node: ParallelGateway) extends Actor with ActorLogging with UnconditionalTokenEmitter {
   // Map from SequenceFlowRef to tokens
   var tokenBuffers: Map[String, Seq[Token]] =
-    node.getIncomingFlows().asScala.map(_.getId -> Nil).toMap
+    node.getIncoming.asScala.map(_.getId -> Nil).toMap
 
   def receive = {
     case IncomingToken(token, sequenceFlowRef) => {

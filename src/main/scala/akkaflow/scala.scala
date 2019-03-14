@@ -1,17 +1,20 @@
 package akkaflow
 
-import java.io.StringReader
+import java.io.{ByteArrayInputStream, StringReader}
 
 import akka.actor.{ActorSystem, Props}
 import akka.pattern.ask
 import akka.util.Timeout
 import javax.xml.stream.XMLInputFactory
+import org.camunda.bpm.model.bpmn.Bpmn
+import org.camunda.bpm.model.bpmn.instance.Process
 
 import scala.concurrent.duration._
-import org.activiti.bpmn.converter.BpmnXMLConverter
-
 import scala.concurrent.Await
 import scala.xml.Elem
+
+import scala.collection.JavaConverters._
+
 
 object TestDelegate extends Function0[Unit] {
   var executions = 0
@@ -26,29 +29,32 @@ object HelloWorld {
     def parseProcess(process: Elem) = {
       val definitions = <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
                                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                                     xmlns:activiti="http://activiti.org/bpmn"
-                                     targetNamespace="org.activiti.examples">
+                                     xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                                     xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                                     xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                                     xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                                     xmlns:camunda="http://camunda.org/schema/1.0/bpmn"
+                                     targetNamespace="http://camunda.org/examples">
 
         { process }
       </definitions>
       val reader = new StringReader(definitions.toString)
       val factory = XMLInputFactory.newInstance()
-      val streamReader = factory.createXMLStreamReader(reader);
-      val converter = new BpmnXMLConverter
-      val process1 = converter.convertToBpmnModel(streamReader).getProcesses().get(0)
+      val streamReader = factory.createXMLStreamReader(reader)
+      val model = Bpmn.readModelFromStream(new ByteArrayInputStream(definitions.toString().getBytes))
+      val process1 = model.getModelElementsByType(model.getModel.getType(classOf[Process])).asScala.head
       var cnt = 0
-      process1.getFlowElements().forEach(e =>
-        if (e.getId == null) {
-          e.setId("generatedId" + cnt)
-          cnt += 1
-        }
-      )
+//      process1.getFlowElement().forEach(e =>
+//        if (e.getId == null) {
+//          e.setId("generatedId" + cnt)
+//          cnt += 1
+//        }
+//      )
 //      process1.getFlowElement().forEach(e =>
 //      if(e.con)
 //      )
       process1
     }
-    val input = 1
     val className = TestDelegate.getClass.getName
     val xml =
 //      <process id="myProcess" name="My process" isExecutable="true">
@@ -126,19 +132,39 @@ object HelloWorld {
 //      <endEvent id="theEnd" />
 //      </process>
 
-      <process id="Process_1" isExecutable="true">
-        <startEvent id="StartEvent_1">
-          <outgoing>SequenceFlow_1sufdm6</outgoing>
-        </startEvent>
-        <serviceTask id="Task_186tl9n" name="Receive Payment" activiti:class={className} />
-        <sequenceFlow id="SequenceFlow_1sufdm6" sourceRef="StartEvent_1" targetRef="Task_186tl9n" />
-        <endEvent id="EndEvent_074u7iy">
-          <incoming>SequenceFlow_0mym8rz</incoming>
-        </endEvent>
-        <sequenceFlow id="SequenceFlow_0mym8rz" sourceRef="Task_186tl9n" targetRef="EndEvent_074u7iy" />
-      </process>
-
-
+      <bpmn:process id="Process_1u2b75f" isExecutable="false">
+        <bpmn:startEvent id="StartEvent_0y6xjv6">
+          <bpmn:outgoing>SequenceFlow_0crmfdo</bpmn:outgoing>
+        </bpmn:startEvent>
+        <bpmn:sequenceFlow id="SequenceFlow_0crmfdo" sourceRef="StartEvent_0y6xjv6" targetRef="ExclusiveGateway_124rq37" />
+        <bpmn:sequenceFlow id="SequenceFlow_0jpl7bb" name="" sourceRef="ExclusiveGateway_124rq37" targetRef="Task_0bz8cbw">
+          <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${{input == 530}}</bpmn:conditionExpression>
+        </bpmn:sequenceFlow>
+        <bpmn:endEvent id="EndEvent_1f7gwmo">
+          <bpmn:incoming>SequenceFlow_0t8f98m</bpmn:incoming>
+        </bpmn:endEvent>
+        <bpmn:sequenceFlow id="SequenceFlow_0t8f98m" sourceRef="Task_0bz8cbw" targetRef="EndEvent_1f7gwmo" />
+        <bpmn:serviceTask id="Task_0bz8cbw" camunda:class="akkaflow.TestDelegate$">
+          <bpmn:incoming>SequenceFlow_0jpl7bb</bpmn:incoming>
+          <bpmn:outgoing>SequenceFlow_0t8f98m</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:serviceTask id="Task_0qhu2ur" camunda:class="akkaflow.TestDelegate$">
+          <bpmn:incoming>SequenceFlow_1ieubgb</bpmn:incoming>
+          <bpmn:outgoing>SequenceFlow_1alq3jf</bpmn:outgoing>
+        </bpmn:serviceTask>
+        <bpmn:sequenceFlow id="SequenceFlow_1ieubgb" sourceRef="ExclusiveGateway_124rq37" targetRef="Task_0qhu2ur">
+          <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${{input &lt; 531}}</bpmn:conditionExpression>
+        </bpmn:sequenceFlow>
+        <bpmn:endEvent id="EndEvent_1inpzfr">
+          <bpmn:incoming>SequenceFlow_1alq3jf</bpmn:incoming>
+        </bpmn:endEvent>
+        <bpmn:sequenceFlow id="SequenceFlow_1alq3jf" sourceRef="Task_0qhu2ur" targetRef="EndEvent_1inpzfr" />
+        <bpmn:inclusiveGateway id="ExclusiveGateway_124rq37">
+          <bpmn:incoming>SequenceFlow_0crmfdo</bpmn:incoming>
+          <bpmn:outgoing>SequenceFlow_0jpl7bb</bpmn:outgoing>
+          <bpmn:outgoing>SequenceFlow_1ieubgb</bpmn:outgoing>
+        </bpmn:inclusiveGateway>
+      </bpmn:process>
 
     val process1 = parseProcess(xml)
     val system = ActorSystem("bpmn")

@@ -1,8 +1,9 @@
 package akkaflow
 
-import org.activiti.bpmn.model.Process
+import akka.actor.{ Actor, ActorRef, Props, actorRef2Scala}
+import org.camunda.bpm.model.bpmn.instance.Process
 
-import akka.actor.{ Actor, ActorRef, Props, actorRef2Scala }
+
 
 object ProcessDefActor {
   case class StartProcess(variables: Map[String, Any] = Map.empty)

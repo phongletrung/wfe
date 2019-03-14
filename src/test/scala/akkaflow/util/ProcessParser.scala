@@ -4,7 +4,6 @@ import java.io.StringReader
 
 import scala.xml.Elem
 
-import org.activiti.bpmn.converter.BpmnXMLConverter
 
 import javax.xml.stream.XMLInputFactory
 
@@ -17,7 +16,7 @@ object ProcessParser {
     val reader = new StringReader(definitions.toString)
     val factory = XMLInputFactory.newInstance()
     val streamReader = factory.createXMLStreamReader(reader);
-    val converter = new BpmnXMLConverter
-    converter.convertToBpmnModel(streamReader).getProcesses().get(0)
+    val converter = null
+    converter
   }
 }

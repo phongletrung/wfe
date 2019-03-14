@@ -2,10 +2,10 @@ package akkaflow.flownodes
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Promise
-import org.activiti.bpmn.model.UserTask
 import akka.actor._
 import akkaflow.token.UnconditionalTokenEmitter
 import akkaflow.{IncomingToken, Task}
+import org.camunda.bpm.model.bpmn.instance.UserTask
 
 object UserTaskActor {
 
