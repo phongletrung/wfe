@@ -23,6 +23,7 @@ class ParallelGatewayActor(val node: ParallelGateway) extends Actor with ActorLo
         log.info("We have a token on every incoming sequence flow!")
         val tokens = headTokenOptions.map(_.get)
         tokenBuffers = tokenBuffers mapValues (_.tail)
+        //TODO
         emitTokens(tokens.toSeq, sender)
       }
     }
