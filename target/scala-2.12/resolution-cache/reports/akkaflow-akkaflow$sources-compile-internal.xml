@@ -7,7 +7,7 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190314131154"/>
+		date="20190416164431"/>
 	<dependencies>
 		<module organisation="org.camunda.bpm.model" name="camunda-bpmn-model">
 			<revision name="7.10.0" status="release" pubdate="20181122122222" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.camunda.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="8">

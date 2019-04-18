@@ -4,6 +4,7 @@ import akka.actor._
 import de.odysseus.el.ExpressionFactoryImpl
 import de.odysseus.el.util.SimpleContext
 import org.camunda.bpm.model.bpmn.instance.{Gateway, SequenceFlow}
+import wfe.token.Tok.Token
 
 import scala.collection.JavaConverters._
 
@@ -12,10 +13,11 @@ import scala.collection.JavaConverters._
  * to true, or the default condition otherwise.
  */
 trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
-  def emitTokens(existingTokens: Seq[Token], to: ActorRef) = {
+  def emitTokens(existingTokens: Seq[Token[_]], to: ActorRef) = {
     val potentialTargets = node.getOutgoing().asScala
-
-    val target = potentialTargets.find(evaluateCondition(_))
+    if (existingTokens.size > 1)
+      throw new RuntimeException("should not happen")
+    val target = potentialTargets.find(evaluateCondition(_, existingTokens.head))
 //      .orElse(defaultFlow)
       .getOrElse {
         // BOOM!
@@ -25,12 +27,12 @@ trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
     sendAndDestroyTokens(existingTokens, Seq(target), to)
   }
 
-  def evaluateCondition(flow: SequenceFlow) = flow.getConditionExpression match {
+  def evaluateCondition(flow: SequenceFlow, token: Token[_]) = flow.getConditionExpression match {
     case null => false // This is an unconditional flow
     case conditionExpression => {
       val factory = new ExpressionFactoryImpl
       val context = new SimpleContext
-      context.setVariable("input", factory.createValueExpression(530, java.lang.Integer.TYPE))
+      context.setVariable("input", factory.createValueExpression(token.value, java.lang.Integer.TYPE))
       val e = factory.createValueExpression(context, conditionExpression.getTextContent, java.lang.Boolean.TYPE)
       e.getValue(context) == true
 //      conditionExpression.toBoolean

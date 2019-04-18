@@ -1,4 +1,4 @@
-import akkaflow.token.Token
+import wfe.token.Tok.Token
 
 import scala.concurrent.Promise
 
@@ -8,10 +8,10 @@ package object akkaflow {
   case class CompleteUserTask(nodeRef: String)
   case class Continue()
 
-  case class IncomingToken(token: Token, sequenceFlowRef: String)
-  case class OutgoingToken(token: Token, sequenceFlowRef: String)
-  case class CreateToken(sequenceFlowRef: String)
-  case class DestroyToken(token: Token)
+  case class IncomingToken(token: Token[_], sequenceFlowRef: String)
+  case class OutgoingToken(token: Token[_], sequenceFlowRef: String)
+  case class CreateToken(oldtoken: Option[Token[_]], sequenceFlowRef: String)
+  case class DestroyToken(token: Token[_])
 
 }
 

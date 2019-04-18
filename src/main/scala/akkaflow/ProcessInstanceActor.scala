@@ -4,7 +4,7 @@ import akka.actor.{Actor, ActorLogging, ActorRef, actorRef2Scala}
 import akkaflow.ProcessDefActor.StartProcess
 import akkaflow.flownodes.NodeActor
 import akkaflow.flownodes.NodeActor._
-import akkaflow.token.Token
+import wfe.token.Tok.Token
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 
 import scala.collection.JavaConverters.collectionAsScalaIterableConverter
@@ -20,7 +20,7 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
    * Map from tokens to the id of the flownode where the token
    * currently is.
    */
-  var tokens: Map[Token, String] = Map()
+  var tokens: Map[Token[_], String] = Map()
 
   var variables: Map[String, Any] = Map()
 
@@ -45,12 +45,11 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
       tokens += token -> targetNode
       target ! IncomingToken(token, sequenceFlowRef)
     }
-    case CreateToken(sequenceFlowRef) => {
-
+    case CreateToken(oldtoken, sequenceFlowRef) => {
       val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
       val targetNode = sequenceFlow.getTarget.getId
       val target = flowNodeActors(targetNode)
-      val token = createToken()
+      val token = createToken(oldtoken.getOrElse(createToken(0)).value)
       tokens += token -> targetNode
       target ! IncomingToken(token, sequenceFlowRef)
     }
@@ -73,7 +72,7 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
 
   def startNode: Option[FlowElement] = process.getFlowElements.asScala.find(_.isInstanceOf[StartEvent])
 
-  def createToken() = Token(generateTokenId)
+  def createToken[T](t:T) = Token(generateTokenId, t)
 
   var nextTokenId = 0
   def generateTokenId = {

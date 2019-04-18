@@ -33,6 +33,7 @@ class UserTaskActor(val node: UserTask, processInstanceId: String) extends Actor
         currentEventStream.publish(UserTaskActor.TaskCompleted(task))
       }
     }
+    case (x: Int, IncomingToken(token, _)) =>
+      if (x > 4) println() else println()
   }
-
 }
