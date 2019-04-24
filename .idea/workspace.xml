@@ -4,63 +4,14 @@
     <list default="true" id="62a30412-7eff-4983-86f6-dad6612269a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/modules/akkaflow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/akkaflow.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-workflowengine-build-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/ProcessInstanceActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/ProcessInstanceActor.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/ServiceTaskExamples.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/ServiceTaskExamples.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ExclusiveGatewayActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ExclusiveGatewayActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ParallelGatewayActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ParallelGatewayActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ServiceTaskActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ServiceTaskActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/UserTaskActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/UserTaskActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/package.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/scala.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/scala.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/token/ExclusiveTokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/token/ExclusiveTokenEmitter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/token/InclusiveTokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/token/InclusiveTokenEmitter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/token/Token.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/token/Token.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/token/TokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/token/TokenEmitter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/akkaflow/token/UnconditionalTokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/akkaflow/token/UnconditionalTokenEmitter.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/HelloWorld$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/HelloWorld$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/ProcessInstanceActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/ProcessInstanceActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/ProcessInstanceActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/ProcessInstanceActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/TestDelegate$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/TestDelegate$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/TestDelegate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/TestDelegate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/EndEventActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/EndEventActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/EndEventActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/EndEventActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ExclusiveGatewayActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ExclusiveGatewayActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ExclusiveGatewayActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ExclusiveGatewayActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ParallelGatewayActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ParallelGatewayActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ParallelGatewayActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ParallelGatewayActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ServiceTaskActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ServiceTaskActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ServiceTaskActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/ServiceTaskActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/StartEventActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/StartEventActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/UserTaskActor$$anonfun$receive$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/UserTaskActor$$anonfun$receive$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/UserTaskActor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/flownodes/UserTaskActor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$DestroyToken$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$DestroyToken$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$DestroyToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$DestroyToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$IncomingToken$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$IncomingToken$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$IncomingToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$IncomingToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$OutgoingToken$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$OutgoingToken$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$OutgoingToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$OutgoingToken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/ExclusiveTokenEmitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/ExclusiveTokenEmitter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/Token$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/TokenEmitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/TokenEmitter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/UnconditionalTokenEmitter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/token/UnconditionalTokenEmitter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$CreateToken$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$CreateToken$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$CreateToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/akkaflow/package$CreateToken.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/akkaflow/akkaflow$sources/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/akkaflow/akkaflow$sources/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/akkaflow/akkaflow$sources/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/akkaflow/akkaflow$sources/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-compile-internal.xml" afterDir="false" />
@@ -74,8 +25,7 @@
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-scala-tool.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-test-internal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/akkaflow-akkaflow$sources-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -97,30 +47,30 @@
     <session id="1506990076">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.17" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.37" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="conf" value="1" />
-          <entry key="java" value="44" />
+          <entry key="java" value="46" />
           <entry key="properties" value="1" />
           <entry key="sbt" value="5" />
-          <entry key="scala" value="231" />
+          <entry key="scala" value="239" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HOCON" value="1" />
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="46" />
           <entry key="Properties" value="1" />
-          <entry key="Scala" value="231" />
+          <entry key="Scala" value="239" />
           <entry key="XML" value="5" />
           <entry key="sbt" value="5" />
         </counts>
@@ -129,14 +79,14 @@
         <counts>
           <entry key="sbt" value="80" />
           <entry key="sbtShell" value="7" />
-          <entry key="scala" value="6659" />
-          <entry key="txt" value="88" />
+          <entry key="scala" value="7679" />
+          <entry key="txt" value="231" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="88" />
-          <entry key="Scala" value="6659" />
+          <entry key="PLAIN_TEXT" value="231" />
+          <entry key="Scala" value="7679" />
           <entry key="sbt" value="80" />
           <entry key="sbtShell" value="7" />
         </counts>
@@ -148,31 +98,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ProcessInstanceActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="320">
+              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
               <folding>
-                <element signature="e#18#83#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/Option.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ParallelGatewayActor.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-              <folding>
-                <element signature="e#28#47#0" expanded="true" />
+                <element signature="e#18#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/package.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -191,13 +120,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/TokenEmitter.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ProcessDefActor.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-              <folding>
-                <element signature="e#25#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -205,7 +131,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/ExclusiveTokenEmitter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
+            <state relative-caret-position="255">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
@@ -214,23 +140,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/UnconditionalTokenEmitter.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-              <folding>
-                <element signature="e#24#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/scala.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="430" column="28" selection-start-line="430" selection-start-column="28" selection-end-line="430" selection-end-column="28" />
+            <state relative-caret-position="157">
+              <caret line="556" column="26" lean-forward="true" selection-start-line="556" selection-end-line="557" />
               <folding>
                 <element signature="e#18#69#0" expanded="true" />
               </folding>
@@ -239,10 +153,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ServiceTaskActor.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="e#28#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ServiceTaskExamples.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="58" column="69" lean-forward="true" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+            <state relative-caret-position="484">
+              <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding>
                 <element signature="e#18#64#0" expanded="true" />
               </folding>
@@ -251,10 +177,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/akkaflow/ProcessDefSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/Token.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/InclusiveTokenEmitter.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+            <state relative-caret-position="405">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding>
                 <element signature="e#24#43#0" expanded="true" />
               </folding>
@@ -266,17 +210,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subsc</find>
-      <find>option</find>
-      <find>parall</find>
-      <find>intermedi</find>
-      <find>multip</find>
-      <find>akkaflow.mu</find>
-      <find>token(</find>
-      <find>pri</find>
-      <find>a is gr</find>
-      <find>printl</find>
-      <find>print</find>
       <find>set a</find>
       <find>akkaflow.TestDelegate$akkaflow.PrintGreater$</find>
       <find>cdat</find>
@@ -286,7 +219,6 @@
       <find>println</find>
       <find>eventstream.sub</find>
       <find>eventstre</find>
-      <find>eventstream.pub</find>
       <find>receive</find>
       <find>case</find>
       <find>completa</find>
@@ -295,7 +227,19 @@
       <find>eventstream.su</find>
       <find>event</find>
       <find>createtoke</find>
+      <find>context.actor</find>
       <find>cd</find>
+      <find>eventstream.s</find>
+      <find>eventstream.pub</find>
+      <find>evenstream</find>
+      <find>eventstream.subs</find>
+      <find>xml2</find>
+      <find>processde</find>
+      <find>events</find>
+      <find>cdata</find>
+      <find>process2</find>
+      <find>testde</find>
+      <find>akkaflow</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -330,10 +274,10 @@
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ParallelGatewayActor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ServiceTaskActor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/package.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/akkaflow/ProcessInstanceActor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/token/TokenEmitter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/token/ExclusiveTokenEmitter.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/token/InclusiveTokenEmitter.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/akkaflow/ProcessInstanceActor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/ServiceTaskExamples.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/akkaflow/scala.scala" />
       </list>
@@ -347,9 +291,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="40" />
-    <option name="y" value="128" />
+    <option name="y" value="23" />
     <option name="width" value="1400" />
-    <option name="height" value="833" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -437,7 +381,7 @@
     <property name="SearchEverywhereHistoryKey" value="line comment&#9;ACTION&#9;CommentByLineComment" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555593273537" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556119179796" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -541,7 +485,8 @@
       <workItem from="1551455276630" duration="10281000" />
       <workItem from="1551886355850" duration="13733000" />
       <workItem from="1552480088172" duration="40234000" />
-      <workItem from="1555425614175" duration="21244000" />
+      <workItem from="1555425614175" duration="24540000" />
+      <workItem from="1556101487990" duration="8133000" />
     </task>
     <task id="LOCAL-00001" summary="dda">
       <created>1551458892237</created>
@@ -592,11 +537,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552605781941</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new generic token&#10;ParallelGateway can now pass multiple tokens&#10;exclusive gateway can take the value">
+      <created>1555601509175</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1555601509176</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100355000" />
+    <option name="totallyTimeSpent" value="111784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -608,18 +560,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="128" width="1400" height="833" extended-state="0" />
+    <frame x="40" y="23" width="1400" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7514451" visible="true" weight="0.224595" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7509881" visible="true" weight="0.224595" />
       <window_info id="Designer" order="1" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Structure" order="4" sideWeight="0.24855492" side_tool="true" visible="true" weight="0.224595" />
+      <window_info id="Structure" order="4" sideWeight="0.24901186" side_tool="true" visible="true" weight="0.224595" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992636" visible="true" weight="0.5330634" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992636" visible="true" weight="0.355414" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.47368422" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -630,7 +583,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50073636" side_tool="true" weight="0.24831308" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32928476" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32928476" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.5923567" />
       <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -687,7 +640,8 @@
     <MESSAGE value="exclusive angepasst" />
     <MESSAGE value="test camunda" />
     <MESSAGE value="inclusivegateway added" />
-    <option name="LAST_COMMIT_MESSAGE" value="inclusivegateway added" />
+    <MESSAGE value="new generic token&#10;ParallelGateway can now pass multiple tokens&#10;exclusive gateway can take the value" />
+    <option name="LAST_COMMIT_MESSAGE" value="new generic token&#10;ParallelGateway can now pass multiple tokens&#10;exclusive gateway can take the value" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -699,14 +653,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/collection/IterableLike.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="107" column="35" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/akkaflow/util/ProcessParser.scala" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Process.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -859,9 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -869,16 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#28#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/NodeActor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -910,41 +843,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/akkaflow/ProcessDefSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/com.typesafe.akka/akka-actor_2.12/srcs/akka-actor_2.12-2.5.21-sources.jar!/akka/actor/ActorSystem.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="467" column="11" selection-start-line="467" selection-start-column="6" selection-end-line="467" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ProcessDefActor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/Token.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ServiceTaskActor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <element signature="e#28#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -966,9 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="75" selection-start-line="75" selection-end-line="75" />
-          <folding>
-            <element signature="e#2936#2937#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -986,50 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ParallelGatewayActor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="e#28#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.8-sources.jar!/scala/Option.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
           <caret line="136" column="20" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ProcessInstanceActor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-          <folding>
-            <element signature="e#18#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/package.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/TokenEmitter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding>
-            <element signature="e#25#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,29 +902,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/InclusiveTokenEmitter.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/TokenEmitter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="33" column="37" lean-forward="true" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+        <state relative-caret-position="209">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
-            <element signature="e#24#43#0" expanded="true" />
+            <element signature="e#25#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ServiceTaskExamples.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.camunda.bpm.model/camunda-bpmn-model/srcs/camunda-bpmn-model-7.10.0-sources.jar!/org/camunda/bpm/model/bpmn/instance/ParallelGateway.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="58" column="69" lean-forward="true" selection-start-line="58" selection-start-column="69" selection-end-line="58" selection-end-column="69" />
+        <state relative-caret-position="150">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ParallelGatewayActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
           <folding>
-            <element signature="e#18#64#0" expanded="true" />
+            <element signature="e#28#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/NodeActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="23" selection-start-line="14" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.camunda.bpm.model/camunda-bpmn-model/srcs/camunda-bpmn-model-7.10.0-sources.jar!/org/camunda/bpm/model/bpmn/instance/ExclusiveGateway.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/ExclusiveTokenEmitter.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
+        <state relative-caret-position="255">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="e#24#43#0" expanded="true" />
@@ -1073,10 +953,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/Token.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/token/InclusiveTokenEmitter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+          <folding>
+            <element signature="e#24#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/akkaflow/ProcessDefSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ProcessDefActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ProcessInstanceActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding>
+            <element signature="e#18#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/flownodes/ServiceTaskActor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#28#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/ServiceTaskExamples.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="90" column="29" lean-forward="true" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+          <folding>
+            <element signature="e#18#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/akkaflow/scala.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="430" column="28" selection-start-line="430" selection-start-column="28" selection-end-line="430" selection-end-column="28" />
+        <state relative-caret-position="157">
+          <caret line="556" column="26" lean-forward="true" selection-start-line="556" selection-end-line="557" />
           <folding>
             <element signature="e#18#69#0" expanded="true" />
           </folding>

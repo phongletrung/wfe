@@ -1,11 +1,13 @@
 package akkaflow
 
-import akka.actor.{Actor, ActorLogging, ActorRef, actorRef2Scala}
+import akka.actor.SupervisorStrategy.Resume
+import akka.actor.{Actor, ActorLogging, ActorRef, OneForOneStrategy, SupervisorStrategy, actorRef2Scala}
 import akkaflow.ProcessDefActor.StartProcess
 import akkaflow.flownodes.NodeActor
 import akkaflow.flownodes.NodeActor._
 import wfe.token.Tok.Token
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
+import scala.concurrent.duration._
 
 import scala.collection.JavaConverters.collectionAsScalaIterableConverter
 
@@ -69,6 +71,12 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
 
     case GetVariables => sender ! variables
   }
+
+
+  override def supervisorStrategy: SupervisorStrategy =
+    OneForOneStrategy(maxNrOfRetries = 10, withinTimeRange = 1.minute) {
+      case _: ArithmeticException => Resume
+    }
 
   def startNode: Option[FlowElement] = process.getFlowElements.asScala.find(_.isInstanceOf[StartEvent])
 

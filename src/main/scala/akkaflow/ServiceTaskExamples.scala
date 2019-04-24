@@ -55,7 +55,7 @@ object TestDelegate extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
       case Token(id, i: Int) =>
-        val newtoken = Token(id, i + 7)
+        val newtoken = Token(id, i + 6)
         println(s"Increased token $id, from $i to ${newtoken.value}")
         newtoken
       case t: Token[_] => t
