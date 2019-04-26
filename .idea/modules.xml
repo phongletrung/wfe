@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/akkaflow.iml" filepath="$PROJECT_DIR$/.idea/modules/akkaflow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/wfe.iml" filepath="$PROJECT_DIR$/.idea/modules/wfe.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/workflowengine-build.iml" filepath="$PROJECT_DIR$/.idea/modules/workflowengine-build.iml" />
     </modules>
   </component>

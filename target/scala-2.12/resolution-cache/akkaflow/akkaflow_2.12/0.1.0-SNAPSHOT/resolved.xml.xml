@@ -4,7 +4,7 @@
 		module="akkaflow_2.12"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190314131153"
+		publication="20190424213811"
 	>
 		<description>
 		akkaflow
