@@ -547,24 +547,24 @@ object ProcessManager {
         |      <bpmn:incoming>SequenceFlow_01pgkkk</bpmn:incoming>
         |    </bpmn:endEvent>
         |    <bpmn:sequenceFlow id="SequenceFlow_01pgkkk" sourceRef="ExclusiveGateway_0g7dtsm" targetRef="EndEvent_0yhcbcz" />
-        |    <bpmn:serviceTask id="Task_194auc9" name="" camunda:class="wfe.PrintSmallerThenSix$">
+        |    <bpmn:serviceTask id="Task_194auc9" name="" camunda:class="wfe.MultiplyWithFive$">
         |      <bpmn:incoming>SequenceFlow_02w0ibm</bpmn:incoming>
         |      <bpmn:outgoing>SequenceFlow_1k9uxrd</bpmn:outgoing>
         |    </bpmn:serviceTask>
-        |    <bpmn:serviceTask id="Task_1bavjo6" name="" camunda:class="wfe.PrintGreaterThenSix$">
+        |    <bpmn:serviceTask id="Task_1bavjo6" name="" camunda:class="wfe.MultiplyWithTen$">
         |      <bpmn:incoming>SequenceFlow_1bjj688</bpmn:incoming>
         |      <bpmn:outgoing>SequenceFlow_11wz7y8</bpmn:outgoing>
         |    </bpmn:serviceTask>
-        |    <bpmn:exclusiveGateway id="ExclusiveGateway_0g7dtsm">
+        |    <bpmn:parallelGateway id="ExclusiveGateway_0g7dtsm">
         |      <bpmn:incoming>SequenceFlow_11wz7y8</bpmn:incoming>
         |      <bpmn:incoming>SequenceFlow_1k9uxrd</bpmn:incoming>
         |      <bpmn:outgoing>SequenceFlow_01pgkkk</bpmn:outgoing>
-        |    </bpmn:exclusiveGateway>
-        |    <bpmn:exclusiveGateway id="ExclusiveGateway_0771wwa">
+        |    </bpmn:parallelGateway>
+        |    <bpmn:parallelGateway id="ExclusiveGateway_0771wwa">
         |      <bpmn:incoming>SequenceFlow_1mzjozf</bpmn:incoming>
         |      <bpmn:outgoing>SequenceFlow_1bjj688</bpmn:outgoing>
         |      <bpmn:outgoing>SequenceFlow_02w0ibm</bpmn:outgoing>
-        |    </bpmn:exclusiveGateway>
+        |    </bpmn:parallelGateway>
         |  </bpmn:process>
         |  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         |    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1">
@@ -585,7 +585,7 @@ object ProcessManager {
         |        <di:waypoint xsi:type="dc:Point" x="347" y="120" />
         |        <di:waypoint xsi:type="dc:Point" x="396" y="120" />
         |        <bpmndi:BPMNLabel>
-        |          <dc:Bounds x="371.5" y="98" width="0" height="13" />
+        |          <dc:Bounds x="371.5" y="98.5" width="0" height="13" />
         |        </bpmndi:BPMNLabel>
         |      </bpmndi:BPMNEdge>
         |      <bpmndi:BPMNEdge id="SequenceFlow_02w0ibm_di" bpmnElement="SequenceFlow_02w0ibm">
@@ -630,7 +630,7 @@ object ProcessManager {
         |        <di:waypoint xsi:type="dc:Point" x="705" y="120" />
         |        <di:waypoint xsi:type="dc:Point" x="736" y="120" />
         |        <bpmndi:BPMNLabel>
-        |          <dc:Bounds x="720.5" y="98" width="0" height="13" />
+        |          <dc:Bounds x="720.5" y="98.5" width="0" height="13" />
         |        </bpmndi:BPMNLabel>
         |      </bpmndi:BPMNEdge>
         |      <bpmndi:BPMNShape id="ServiceTask_14cajgo_di" bpmnElement="Task_194auc9">
@@ -639,13 +639,13 @@ object ProcessManager {
         |      <bpmndi:BPMNShape id="ServiceTask_0i949jz_di" bpmnElement="Task_1bavjo6">
         |        <dc:Bounds x="496" y="165" width="100" height="80" />
         |      </bpmndi:BPMNShape>
-        |      <bpmndi:BPMNShape id="ExclusiveGateway_0g7dtsm_di" bpmnElement="ExclusiveGateway_0g7dtsm" isMarkerVisible="true">
+        |      <bpmndi:BPMNShape id="ParallelGateway_12xfl96_di" bpmnElement="ExclusiveGateway_0g7dtsm">
         |        <dc:Bounds x="655" y="95" width="50" height="50" />
         |        <bpmndi:BPMNLabel>
         |          <dc:Bounds x="680" y="148" width="0" height="13" />
         |        </bpmndi:BPMNLabel>
         |      </bpmndi:BPMNShape>
-        |      <bpmndi:BPMNShape id="ExclusiveGateway_0771wwa_di" bpmnElement="ExclusiveGateway_0771wwa" isMarkerVisible="true">
+        |      <bpmndi:BPMNShape id="ParallelGateway_1slttno_di" bpmnElement="ExclusiveGateway_0771wwa">
         |        <dc:Bounds x="396" y="95" width="50" height="50" />
         |        <bpmndi:BPMNLabel>
         |          <dc:Bounds x="421" y="148" width="0" height="13" />

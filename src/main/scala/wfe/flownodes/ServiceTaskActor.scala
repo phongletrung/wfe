@@ -21,19 +21,9 @@ class ServiceTaskActor(val node: FlowNode) extends Actor with ActorLogging with 
   
 
   def receive = {
-    case IncomingToken(token @ Token(id, v: Int), _) =>
+    case IncomingToken(token: Token[_], _) =>
       log.info("Servicetask received a token")
       val updatedToken = delegate(token)
-      emitTokens(Seq(updatedToken), sender)
-    case IncomingToken(token @ Token(id, v: String), _) =>
-      log.info("Servicetask received a token")
-      val updatedToken = delegate(token)
-      log.info(token.toString)
-      emitTokens(Seq(updatedToken), sender)
-    case IncomingToken(token @ Token(id, v: Boolean), _) =>
-      log.info("Servicetask received a token")
-      val updatedToken = delegate(token)
-      log.info(token.toString)
       emitTokens(Seq(updatedToken), sender)
   }
 }

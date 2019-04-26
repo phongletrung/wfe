@@ -38,8 +38,18 @@ trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
     case conditionExpression => {
       val factory = new ExpressionFactoryImpl
       val context = new SimpleContext
-      context.setVariable("input", factory.createValueExpression(token.value, java.lang.Integer.TYPE))
-      val e = factory.createValueExpression(context, conditionExpression.getTextContent, java.lang.Boolean.TYPE)
+
+      token match {
+        case Token(id: String, s: Tok.State) =>
+          s.state.foreach {
+            case (k, v) => v match {
+              case st: String => context.setVariable(k, factory.createValueExpression(st, classOf[String]))
+              case i: Integer => context.setVariable(k, factory.createValueExpression(i, classOf[Integer]))
+              case b: Boolean => context.setVariable(k, factory.createValueExpression(b, classOf[java.lang.Boolean]))
+            }
+          }
+      }
+      val e = factory.createValueExpression(context, conditionExpression.getTextContent, classOf[java.lang.Boolean])
       e.getValue(context) == true
 //      conditionExpression.toBoolean
     }

@@ -6,6 +6,7 @@ import wfe.ProcessDefActor.StartProcess
 import wfe.flownodes.NodeActor
 import wfe.flownodes.NodeActor._
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
+import wfe.token.Tok
 import wfe.token.Tok.Token
 
 import scala.collection.JavaConverters.collectionAsScalaIterableConverter
@@ -51,7 +52,7 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
       val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
       val targetNode = sequenceFlow.getTarget.getId
       val target = flowNodeActors(targetNode)
-      val token = createToken(oldtoken.getOrElse(createToken(0)).value)
+      val token = createToken(oldtoken.getOrElse(createToken(Tok.State(Map()))).value)
       tokens += token -> targetNode
       target ! IncomingToken(token, sequenceFlowRef)
     }

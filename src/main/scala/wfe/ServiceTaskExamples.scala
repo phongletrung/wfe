@@ -1,47 +1,23 @@
 package wfe
 
 import wfe.ServiceTaskExamples.Evaluation
+import wfe.token.Tok
 import wfe.token.Tok.Token
 
 object ServiceTaskExamples {
   type Evaluation = Token[_] => Token[_]
-
-
-  val MultiplayWithFive: Evaluation = (token) => {
-    token match {
-      case Token(id, i: Int) => Token(id, i * 5)
-      case t: Token[_] => t
-    }
-
-  }
-  val MultiplayWithSix: Evaluation = (token) => {
-    token match {
-      case Token(id, i: Int) => Token(id, i * 6)
-      case t: Token[_] => t
-    }
-
-  }
-
-
-  val testDelegate: Evaluation = (token) => {
-    token match {
-      case Token(id, i: Int) =>
-        println("Set a to 6")
-        Token(id, i + 6)
-      case t: Token[_] => t
-    }
-
-  }
 }
 
 
 object PrintGreaterThenSix extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
-      case Token(id, i: Int) =>
-
-          println("a is greater than 6")
-        Token(id, i)
+      case Token(id, s: Tok.State) =>
+        s.state.get("a") match {
+          case Some(i: Int) => println("a is greater than 6")
+          case _ => throw new RuntimeException("a has wrong type or is not set")
+        }
+        Token(id, s)
       case t: Token[_] => t
     }
   }
@@ -50,24 +26,28 @@ object PrintGreaterThenSix extends Evaluation {
 object PrintSmallerThenSix extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
-      case Token(id, i: Int) =>
-
-        println("a is not greater than 6")
-        Token(id, i)
+      case Token(id, s: Tok.State) =>
+        s.state.get("a") match {
+          case Some(i: Int) => println("a is smaller than 6")
+          case _ => throw new RuntimeException("a has wrong type or is not set")
+        }
+        Token(id, s)
       case t: Token[_] => t
     }
   }
 }
 
-
-
-object TestDelegate extends Evaluation {
+object IncreaseBy3 extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
-      case Token(id, i: Int) =>
-        val newtoken = Token(id, i + 3)
-        println(s"Increased token $id, from $i to ${newtoken.value}")
-        newtoken
+      case Token(id, s: Tok.State) =>
+        val newMap = s.state.get("a") match {
+          case None => s.state.updated("a", 3)
+          case Some(i: Int) => s.state.updated("a", i + 3)
+          case _ => throw new RuntimeException("a has wrong type")
+        }
+        println("a increased by 3")
+        Token(id, Tok.State(newMap))
       case t: Token[_] => t
     }
   }
@@ -76,22 +56,55 @@ object TestDelegate extends Evaluation {
 object SetToSix extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
-      case Token(id, i: Int) =>
-        val newtoken = Token(id, 6)
-        println("Variable set to 6")
-        print(newtoken)
-        newtoken
+      case Token(id, s: Tok.State) =>
+        println("a set to 6")
+        Token(id, Tok.State(s.state.updated("a", 6)))
       case t: Token[_] => t
     }
   }
 }
 
-object TestDelegate2 extends Evaluation {
+object AddConflictedVariables extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
-      case Token(id, i: Int) =>
-        println("increased by 8")
-        Token(id, i + 8)
+      case Token(id, s: Tok.State) =>
+        val conflictedElements = scala.collection.mutable.Seq()
+        s.state.foreach {
+          case (k: String, v) => if (k.contains("_token_")) conflictedElements:+ k
+        }
+        Token(id, s)
+      case t: Token[_] => t
+    }
+  }
+}
+
+object IncreaseByEight extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        val newMap = s.state.get("a") match {
+          case None => s.state.updated("a", 8)
+          case Some(i: Int) => s.state.updated("a", i + 8)
+          case _ => throw new RuntimeException("a has wrong type")
+        }
+        println("a increased by 8")
+        Token(id, Tok.State(newMap))
+      case t: Token[_] => t
+    }
+  }
+}
+
+object IncreaseByEightB extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        val newMap = s.state.get("b") match {
+          case None => s.state.updated("b", 8)
+          case Some(i: Int) => s.state.updated("b", i + 8)
+          case _ => throw new RuntimeException("b has wrong type")
+        }
+        println("b increased by 8")
+        Token(id, Tok.State(newMap))
       case t: Token[_] => t
     }
   }
@@ -100,41 +113,37 @@ object TestDelegate2 extends Evaluation {
 object MultiplyWithTen extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
-      case Token(id, i: Int) =>
-        val newtoken = Token(id, 1*10)
-        println("Variable mutiplied with  10")
-
-        println(newtoken)
-        newtoken
+      case Token(id, s: Tok.State) =>
+        val newMap = s.state.get("a") match {
+          case Some(i: Int) => s.state.updated("a", i * 10)
+          case _ => throw new RuntimeException("a has wrong type")
+        }
+        println("a multiplied with 10")
+        Token(id, Tok.State(newMap))
       case t: Token[_] => t
     }
   }
-  }
+}
 
   object MultiplyWithFive extends Evaluation {
     override def apply(token: Token[_]): Token[_] = {
       token match {
-        case Token(id, i: Int) =>
-          val newtoken = Token(id, 1*5)
-          println("Variable mutiplied with  5")
-          println(newtoken)
-          newtoken
+        case Token(id, s: Tok.State) =>
+          val newMap = s.state.get("a") match {
+            case Some(i: Int) => s.state.updated("a", i * 5)
+            case _ => throw new RuntimeException("a has wrong type")
+          }
+          println("a multiplied with 5")
+          Token(id, Tok.State(newMap))
         case t: Token[_] => t
       }
-
     }
-
-
 }
 
 object DoNothing extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
-      case Token(id, i: Int) => Token(id, i * 5)
       case t: Token[_] => t
     }
-
   }
-
-
 }
