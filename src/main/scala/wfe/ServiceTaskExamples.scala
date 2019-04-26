@@ -59,6 +59,8 @@ object SetToSix extends Evaluation {
       case Token(id, s: Tok.State) =>
         println("a set to 6")
         Token(id, Tok.State(s.state.updated("a", 6)))
+
+
       case t: Token[_] => t
     }
   }
@@ -119,6 +121,7 @@ object MultiplyWithTen extends Evaluation {
           case _ => throw new RuntimeException("a has wrong type")
         }
         println("a multiplied with 10")
+        println(token)
         Token(id, Tok.State(newMap))
       case t: Token[_] => t
     }
@@ -134,6 +137,7 @@ object MultiplyWithTen extends Evaluation {
             case _ => throw new RuntimeException("a has wrong type")
           }
           println("a multiplied with 5")
+          println(token)
           Token(id, Tok.State(newMap))
         case t: Token[_] => t
       }
