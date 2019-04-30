@@ -1,17 +1,18 @@
 package wfe
 
-import scala.concurrent.{ Await, Future }
+import scala.concurrent.{Await, Future}
 import scala.concurrent.duration.DurationInt
-
-import org.scalatest.{ BeforeAndAfter, FunSpec }
-
+import org.scalatest.{BeforeAndAfter, FunSpec}
 import akka.actor._
 import akka.pattern.ask
 import akka.testkit.TestProbe
 import akka.util.Timeout
-import wfe.ProcessDefActor.{ ProcessEvent, ProcessFinished, ProcessStarted, StartProcess }
+import wfe.ProcessDefActor.{ProcessEvent, ProcessFinished, ProcessStarted, StartProcess}
 import wfe.ProcessInstanceActor.GetVariables
+import wfe.ProcessManager.Processes
 import wfe.util.ProcessParser
+
+import scala.io.Source
 
 class ProcessDefSpec extends FunSpec with BeforeAndAfter {
 
@@ -112,5 +113,15 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
       assert(variables.get("foo") == Some("bar"))
     }
   }
+describe("End to end process engine tests") {
+  it("Parallel Join works") {
+    val parallelJoin = ProcessManager.parseProcess(Source.fromResource("parallelJoin.xml").mkString)
 
+    val system = ActorSystem("bpmn")
+    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
+    processManager ! ProcessManager.Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
+    println(parallelJoin)
+  }
+
+}
 }

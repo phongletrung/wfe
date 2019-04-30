@@ -13,15 +13,15 @@ libraryDependencies ++= Seq(
   "de.odysseus.juel" % "juel-impl" % "2.2.7",
   "org.camunda.bpm.model" % "camunda-bpmn-model" % "7.10.0",
 
-  "com.typesafe.akka" %% "akka-actor" % "2.5.21",
-  "com.typesafe.akka" %% "akka-agent" % "2.5.21",
+  "com.typesafe.akka" %% "akka-actor" % "2.5.22",
+  "com.typesafe.akka" %% "akka-agent" % "2.5.22",
  "com.typesafe.akka" %% "akka-cluster" % "2.5.22",
   "com.typesafe.akka" %% "akka-slf4j"   % "2.5.22",
 
 "org.slf4j" % "slf4j-api" % "1.7.5",
   "org.slf4j" % "slf4j-simple" % "1.7.5",
   "org.scala-lang.modules" %% "scala-xml" % "1.1.1",
-  "com.typesafe.akka" %% "akka-testkit" % "2.5.21" % "test",
+  "com.typesafe.akka" %% "akka-testkit" % "2.5.22" % "test",
   "org.scalatest" %% "scalatest" % "3.0.5" % "test")
 
 resolvers ++= Seq(
@@ -47,7 +47,7 @@ dockerExposedPorts in Docker := Seq(1600)
 
 dockerEntrypoint in Docker := Seq("sh", "-c", "bin/clustering $*")
 
-dockerRepository := Some("lightbend")
+dockerRepository := Some("phongletrung")
 
 dockerBaseImage := "java"
 enablePlugins(JavaAppPackaging)

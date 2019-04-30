@@ -2,16 +2,13 @@ package wfe
 
 import java.io.{ByteArrayInputStream, StringReader}
 
-import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume, Stop}
-import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, OneForOneStrategy, Props, SupervisorStrategy, Terminated}
-import akka.util.Timeout
+import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props, Terminated}
 import javax.xml.stream.XMLInputFactory
 import org.camunda.bpm.model.bpmn.Bpmn
 import org.camunda.bpm.model.bpmn.instance.Process
 
 import scala.collection.JavaConverters._
-import scala.concurrent.duration._
-import scala.io.Source
+
 
 object ProcessManager {
   def parseProcess(process: String) = {
@@ -23,6 +20,16 @@ object ProcessManager {
     var cnt = 0
     process1
   }
+
+  ////    override def preStart = Cluster(context.system).subscribe(self, classOf[ClusterDomainEvent])
+  //    val cluster = Cluster(context.system)
+  //    // subscribe to cluster changes, re-subscribe when restart
+  //    override def preStart(): Unit = {
+  //      cluster.subscribe(self, initialStateMode = InitialStateAsEvents, classOf[MemberEvent], classOf[UnreachableMember])
+  //    }
+  //    override def postStop(): Unit = cluster.unsubscribe(self)
+  //
+  //
   object Processes {
 
     case class CreateProcess(props: Props, name: String)
@@ -31,11 +38,22 @@ object ProcessManager {
 
   class Processes extends Actor with ActorLogging {
 
+    import ClusteringConfig._
     import Processes._
+
+    implicit val system = ActorSystem(clusterName)
+
+    val clusterListener = system.actorOf(Props[ClusterListener], name = "clusterListener")
+
+    sys.addShutdownHook(system.terminate())
+
 
     var currentProcesses = Set.empty[ActorRef]
 
     override def receive: Receive = {
+
+      //      case MemberUp(member) => log.info("memberUp={}", member.address)
+      //      case event => log.debug("event={}", event.toString)
       case CreateProcess(p, name) =>
         val ref = context.actorOf(p, name)
         currentProcesses += ref
@@ -47,35 +65,42 @@ object ProcessManager {
         currentProcesses -= ref
     }
 
-    override def supervisorStrategy: SupervisorStrategy = OneForOneStrategy(maxNrOfRetries = 20, withinTimeRange = 1 minute) {
-      case _: ArithmeticException => Resume
-      case _: NullPointerException => Restart
-      case _: IllegalArgumentException => Stop
-      case _: Exception => Escalate
-    }
+    //    override def supervisorStrategy: SupervisorStrategy = OneForOneStrategy(maxNrOfRetries = 20, withinTimeRange = 1 minute) {
+    //      case _: ArithmeticException => Resume
+    //      case _: NullPointerException => Restart
+    //      case _: IllegalArgumentException => Stop
+    //      case _: Exception => Escalate
+    //    }
   }
 
-  def main(args: Array[String]): Unit = {
-    implicit val timeout = Timeout(1.seconds)
-
-
-
-
-    val parallelJoin = parseProcess(Source.fromResource("parallelJoin.xml").mkString)
-    val parallelWithIntermediate = parseProcess(Source.fromResource("parallelWithIntermediate.xml").mkString)
-    val rekursionTest = parseProcess(Source.fromResource("rekursionTest.xml").mkString)
-    //    val process4 = parseProcess(Source.fromResource("newtest.xml").mkString)
-
-
-    val system = ActorSystem("bpmn")
-    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
-    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
-//        processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelWithIntermediate), "process2")
-    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], rekursionTest), "process3")
-    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], newtest), "process4")
-
-    //    Thread.sleep(15000)
-    //    system.terminate()
-
-  }
+//  def main(args: Array[String]): Unit = {
+//
+////    implicit val timeout = Timeout(1.seconds)
+//
+//
+//    val parallelJoin = parseProcess(Source.fromResource("parallelJoin.xml").mkString)
+//    val parallelWithIntermediate = parseProcess(Source.fromResource("parallelWithIntermediate.xml").mkString)
+//    val rekursionTest = parseProcess(Source.fromResource("rekursionTest.xml").mkString)
+//    val stringtest = parseProcess(Source.fromResource("string.xml").mkString)
+//    val simpleXOR = parseProcess(Source.fromResource("simpleXOR.xml").mkString)
+//    val xortest = parseProcess(Source.fromResource("xortest.xml").mkString)
+//    val xorarbitrary = parseProcess(Source.fromResource("xorarbitrary.xml").mkString)
+//    val simpleservicetaskonly = parseProcess(Source.fromResource("simpleservicetaskonly.xml").mkString)
+//
+//
+//    val system = ActorSystem("bpmn")
+//
+//
+//    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
+//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
+//    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelWithIntermediate), "process2")
+//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], rekursionTest), "process3")
+//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], stringtest), "process4")
+//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], xorarbitrary), "process5")
+//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], xortest), "process5")
+//
+//    //    Thread.sleep(15000)
+//    //    system.terminate()
+//
+//  }
 }

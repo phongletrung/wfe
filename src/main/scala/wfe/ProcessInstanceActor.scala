@@ -1,16 +1,14 @@
 package wfe
 
-import akka.actor.SupervisorStrategy.Resume
-import akka.actor.{Actor, ActorLogging, ActorRef, AllForOneStrategy, SupervisorStrategy, actorRef2Scala}
+import akka.actor.{Actor, ActorLogging, ActorRef, actorRef2Scala}
+import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 import wfe.ProcessDefActor.StartProcess
 import wfe.flownodes.NodeActor
 import wfe.flownodes.NodeActor._
-import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 import wfe.token.Tok
 import wfe.token.Tok.Token
 
 import scala.collection.JavaConverters.collectionAsScalaIterableConverter
-import scala.concurrent.duration._
 
 object ProcessInstanceActor {
   case object GetVariables
@@ -73,10 +71,10 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
   }
 
 
-  override def supervisorStrategy: SupervisorStrategy =
-    AllForOneStrategy(maxNrOfRetries = 10, withinTimeRange = 1.minute) {
-      case _: ArithmeticException => Resume
-    }
+//  override def supervisorStrategy: SupervisorStrategy =
+//    AllForOneStrategy(maxNrOfRetries = 10, withinTimeRange = 1.minute) {
+//      case _: ArithmeticException => Resume
+//    }
 
   def startNode: Option[FlowElement] = process.getFlowElements.asScala.find(_.isInstanceOf[StartEvent])
 
