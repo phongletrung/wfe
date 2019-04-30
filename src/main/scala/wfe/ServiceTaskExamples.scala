@@ -66,6 +66,23 @@ object SetToSix extends Evaluation {
   }
 }
 
+
+object SetToSixB extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        println("b set to 6")
+        Token(id, Tok.State(s.state.updated("b", 6)))
+
+
+      case t: Token[_] => t
+    }
+  }
+}
+
+
+
+
 object AddConflictedVariables extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
@@ -123,6 +140,7 @@ object MultiplyWithTen extends Evaluation {
         println("a multiplied with 10")
         println(token)
         Token(id, Tok.State(newMap))
+
       case t: Token[_] => t
     }
   }
@@ -148,6 +166,40 @@ object DoNothing extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
       case t: Token[_] => t
+    }
+  }
+}
+
+
+object SetToStringTest extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        var test = "testttt"
+        println(s"String set to '$test")
+
+        Token(id, Tok.State(s.state.updated("s", test)))
+
+
+      case t: Token[_] => t
+    }
+  }
+}
+object CountAmountOfT extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        var number : Int = 0
+        val newMap = s.state.get("s") match {
+          case Some(s: String) =>
+            number = s.count(_ == 't')
+          case _ => throw new RuntimeException("a has wrong type")
+        }
+            println(s"word 'test' has $number 't's")
+            Token(id, Tok.State(s.state.updated("a", number)))
+
+
+          case t: Token[_] => t
     }
   }
 }

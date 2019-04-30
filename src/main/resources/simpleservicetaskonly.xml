@@ -4,7 +4,7 @@
         <bpmn:startEvent id="StartEvent_1gfqk7p">
             <bpmn:outgoing>SequenceFlow_1mplmz2</bpmn:outgoing>
         </bpmn:startEvent>
-        <bpmn:serviceTask id="ServiceTask_1hg31a2" name="setze a auf 6" camunda:class="wfe.TestDelegate2$">
+        <bpmn:serviceTask id="ServiceTask_1hg31a2" name="setze a auf 6" camunda:class="wfe.SetToSix$">
             <bpmn:incoming>SequenceFlow_1mplmz2</bpmn:incoming>
             <bpmn:outgoing>SequenceFlow_1725yso</bpmn:outgoing>
         </bpmn:serviceTask>
