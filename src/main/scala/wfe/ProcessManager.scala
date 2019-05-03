@@ -86,17 +86,19 @@ object ProcessManager {
 //    val xortest = parseProcess(Source.fromResource("xortest.xml").mkString)
 //    val xorarbitrary = parseProcess(Source.fromResource("xorarbitrary.xml").mkString)
 //    val simpleservicetaskonly = parseProcess(Source.fromResource("simpleservicetaskonly.xml").mkString)
+//    val newtest = parseProcess(Source.fromResource("newtest.xml").mkString)
+//    val ab = parseProcess(Source.fromResource("ab.xml").mkString)
 //
 //
 //    val system = ActorSystem("bpmn")
 //
 //
 //    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
-//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
-//    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelWithIntermediate), "process2")
+//        processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], ab), "process1")
+////    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelWithIntermediate), "process2")
 //    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], rekursionTest), "process3")
-//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], stringtest), "process4")
-//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], xorarbitrary), "process5")
+////        processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], stringtest), "process4")
+////        processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], ab), "process5")
 //    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], xortest), "process5")
 //
 //    //    Thread.sleep(15000)

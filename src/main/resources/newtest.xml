@@ -25,14 +25,14 @@
             <bpmn:outgoing>SequenceFlow_0cctsg0</bpmn:outgoing>
         </bpmn:serviceTask>
         <bpmn:sequenceFlow id="SequenceFlow_16u83y7" sourceRef="ExclusiveGateway_0uo9ui8" targetRef="Task_10js49w">
-            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a  <  4}$]]></bpmn:conditionExpression>
+            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a  <  4}]]></bpmn:conditionExpression>
         </bpmn:sequenceFlow>
         <bpmn:serviceTask id="Task_10js49w" camunda:class="wfe.SetToSix$">
             <bpmn:incoming>SequenceFlow_16u83y7</bpmn:incoming>
             <bpmn:outgoing>SequenceFlow_0p6bqn8</bpmn:outgoing>
         </bpmn:serviceTask>
         <bpmn:sequenceFlow id="SequenceFlow_01hax3h" sourceRef="ExclusiveGateway_0uo9ui8" targetRef="Task_07ip4qh">
-            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a  >  4}$]]></bpmn:conditionExpression>
+            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a  >  4}]]></bpmn:conditionExpression>
         </bpmn:sequenceFlow>
         <bpmn:exclusiveGateway id="ExclusiveGateway_1nb7o67">
             <bpmn:incoming>SequenceFlow_0p6bqn8</bpmn:incoming>

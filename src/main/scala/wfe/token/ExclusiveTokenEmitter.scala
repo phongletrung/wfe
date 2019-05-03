@@ -46,10 +46,14 @@ trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
               case st: String => context.setVariable(k, factory.createValueExpression(st, classOf[String]))
               case i: Integer => context.setVariable(k, factory.createValueExpression(i, classOf[Integer]))
               case b: Boolean => context.setVariable(k, factory.createValueExpression(b, classOf[java.lang.Boolean]))
+              case _ => println("Unknown variable", k, v)
             }
           }
       }
-      val e = factory.createValueExpression(context, conditionExpression.getTextContent, classOf[java.lang.Boolean])
+      var condition = conditionExpression.getTextContent
+      if (condition.length > 0 && condition.charAt(0) != '$')
+        condition = "$" + condition
+      val e = factory.createValueExpression(context, condition, classOf[java.lang.Boolean])
       e.getValue(context) == true
 //      conditionExpression.toBoolean
     }

@@ -81,17 +81,114 @@ object SetToSixB extends Evaluation {
 }
 
 
-
-
 object AddConflictedVariables extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
       case Token(id, s: Tok.State) =>
-        val conflictedElements = scala.collection.mutable.Seq()
+        println("token received on addconflictedvariables", s.state)
+        val conflictedElements = scala.collection.mutable.Set[String]()
         s.state.foreach {
-          case (k: String, v) => if (k.contains("_token_")) conflictedElements:+ k
+          case (k: String, v) => if (k.contains("_token_")) conflictedElements.add(k.split("_token_").head)
         }
-        Token(id, s)
+        println(conflictedElements)
+        var curState = s.state
+        conflictedElements.foreach(f => {
+          var values = scala.collection.mutable.Seq[Int]()
+          s.state.foreach {
+            case (k: String, v: Int) => if (k.contains(f + "_token_")) {
+              values = values :+ v
+              curState = curState - k
+            }
+          }
+          curState = curState.updated(f, values.sum)
+        })
+        println("token after addconflictedvariables", curState)
+        Token(id, Tok.State(curState))
+      case t: Token[_] => t
+    }
+  }
+}
+
+object MultiplyConflictedVariables extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        println("token received on addconflictedvariables", s.state)
+        val conflictedElements = scala.collection.mutable.Set[String]()
+        s.state.foreach {
+          case (k: String, v) => if (k.contains("_token_")) conflictedElements.add(k.split("_token_").head)
+        }
+        println(conflictedElements)
+        var curState = s.state
+        conflictedElements.foreach(f => {
+          var values = scala.collection.mutable.Seq[Int]()
+          s.state.foreach {
+            case (k: String, v: Int) => if (k.contains(f + "_token_")) {
+              values = values :+ v
+              curState = curState - k
+            }
+          }
+          curState = curState.updated(f, values.product)
+        })
+        println("token after addconflictedvariables", curState)
+        Token(id, Tok.State(curState))
+      case t: Token[_] => t
+    }
+  }
+}
+
+
+object MaxConflictedVariables extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        println("token received on addconflictedvariables", s.state)
+        val conflictedElements = scala.collection.mutable.Set[String]()
+        s.state.foreach {
+          case (k: String, v) => if (k.contains("_token_")) conflictedElements.add(k.split("_token_").head)
+        }
+        println(conflictedElements)
+        var curState = s.state
+        conflictedElements.foreach(f => {
+          var values = scala.collection.mutable.Seq[Int]()
+          s.state.foreach {
+            case (k: String, v: Int) => if (k.contains(f + "_token_")) {
+              values = values :+ v
+              curState = curState - k
+            }
+          }
+          curState = curState.updated(f, values.max)
+        })
+        println("token after addconflictedvariables", curState)
+        Token(id, Tok.State(curState))
+      case t: Token[_] => t
+    }
+  }
+}
+
+object MinConflictedVariables extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        println("token received on addconflictedvariables", s.state)
+        val conflictedElements = scala.collection.mutable.Set[String]()
+        s.state.foreach {
+          case (k: String, v) => if (k.contains("_token_")) conflictedElements.add(k.split("_token_").head)
+        }
+        println(conflictedElements)
+        var curState = s.state
+        conflictedElements.foreach(f => {
+          var values = scala.collection.mutable.Seq[Int]()
+          s.state.foreach {
+            case (k: String, v: Int) => if (k.contains(f + "_token_")) {
+              values = values :+ v
+              curState = curState - k
+            }
+          }
+          curState = curState.updated(f, values.min)
+        })
+        println("token after addconflictedvariables", curState)
+        Token(id, Tok.State(curState))
       case t: Token[_] => t
     }
   }
@@ -146,20 +243,20 @@ object MultiplyWithTen extends Evaluation {
   }
 }
 
-  object MultiplyWithFive extends Evaluation {
-    override def apply(token: Token[_]): Token[_] = {
-      token match {
-        case Token(id, s: Tok.State) =>
-          val newMap = s.state.get("a") match {
-            case Some(i: Int) => s.state.updated("a", i * 5)
-            case _ => throw new RuntimeException("a has wrong type")
-          }
-          println("a multiplied with 5")
-          println(token)
-          Token(id, Tok.State(newMap))
-        case t: Token[_] => t
-      }
+object MultiplyWithFive extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        val newMap = s.state.get("a") match {
+          case Some(i: Int) => s.state.updated("a", i * 5)
+          case _ => throw new RuntimeException("a has wrong type")
+        }
+        println("a multiplied with 5")
+        println(token)
+        Token(id, Tok.State(newMap))
+      case t: Token[_] => t
     }
+  }
 }
 
 object DoNothing extends Evaluation {
@@ -185,21 +282,22 @@ object SetToStringTest extends Evaluation {
     }
   }
 }
+
 object CountAmountOfT extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
       case Token(id, s: Tok.State) =>
-        var number : Int = 0
+        var number: Int = 0
         val newMap = s.state.get("s") match {
           case Some(s: String) =>
             number = s.count(_ == 't')
           case _ => throw new RuntimeException("a has wrong type")
         }
-            println(s"word 'test' has $number 't's")
-            Token(id, Tok.State(s.state.updated("a", number)))
+        println(s"word 'test' has $number 't's")
+        Token(id, Tok.State(s.state.updated("a", number)))
 
 
-          case t: Token[_] => t
+      case t: Token[_] => t
     }
   }
 }
