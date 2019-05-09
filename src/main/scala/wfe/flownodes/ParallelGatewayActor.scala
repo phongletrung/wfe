@@ -17,11 +17,12 @@ class ParallelGatewayActor(val node: ParallelGateway) extends Actor with ActorLo
     case IncomingToken(token, sequenceFlowRef) => {
 
       log.info("Received a token in Parallel Gateway")
+      //saves token in a map and waits until for every incoming sequence receives a token
       tokenBuffers += sequenceFlowRef -> (tokenBuffers(sequenceFlowRef) :+ token)
 
       // Emit tokens if we
       val headTokenOptions = tokenBuffers.map(_._2.headOption)
-
+      //checks if there is one token for each incoming sequence flow (important for merge because if it is a split)
       if (headTokenOptions forall (_.isDefined)) {
         log.info("We have a token on every incoming sequence flow!")
         val tokens = headTokenOptions.map(_.get)

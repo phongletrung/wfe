@@ -13,6 +13,9 @@ class ServiceTaskActor(val node: FlowNode) extends Actor with ActorLogging with 
 //
 //  println(s"Classname: $className")
 
+  //finds out which kind of ServiceTask it is
+  //which class should be loaded from the xml
+  //had to change it because return values from Camunda where different (return Token instead of Unit)
    val delegate: Evaluation = {
      var delegateName = node.getDomElement.getAttribute("http://camunda.org/schema/1.0/bpmn","class")
      val delegate = Class.forName(delegateName).getField("MODULE$").get(null).asInstanceOf[Evaluation]

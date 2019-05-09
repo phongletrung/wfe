@@ -2,7 +2,7 @@ package wfe
 
 import java.io.{ByteArrayInputStream, StringReader}
 
-import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props, Terminated}
+import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
 import javax.xml.stream.XMLInputFactory
 import org.camunda.bpm.model.bpmn.Bpmn
 import org.camunda.bpm.model.bpmn.instance.Process
@@ -38,15 +38,14 @@ object ProcessManager {
 
   class Processes extends Actor with ActorLogging {
 
-    import ClusteringConfig._
     import Processes._
 
-    implicit val system = ActorSystem(clusterName)
-
-    val clusterListener = system.actorOf(Props[ClusterListener], name = "clusterListener")
-
-    sys.addShutdownHook(system.terminate())
-
+//    implicit val system = ActorSystem(clusterName)
+//
+//    val clusterListener = system.actorOf(Props[ClusterListener], name = "clusterListener")
+//
+//    sys.addShutdownHook(system.terminate())
+//
 
     var currentProcesses = Set.empty[ActorRef]
 

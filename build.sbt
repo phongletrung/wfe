@@ -16,7 +16,9 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-actor" % "2.5.22",
   "com.typesafe.akka" %% "akka-agent" % "2.5.22",
  "com.typesafe.akka" %% "akka-cluster" % "2.5.22",
-  "com.typesafe.akka" %% "akka-slf4j"   % "2.5.22",
+  "com.typesafe.akka" %% "akka-cluster-sharding" % "2.5.22",
+
+"com.typesafe.akka" %% "akka-slf4j"   % "2.5.22",
 
 "org.slf4j" % "slf4j-api" % "1.7.5",
   "org.slf4j" % "slf4j-simple" % "1.7.5",

@@ -13,7 +13,7 @@ import scala.collection.JavaConverters.collectionAsScalaIterableConverter
 object ProcessInstanceActor {
   case object GetVariables
 }
-
+//has the whole process model in process: Process
 class ProcessInstanceActor(processInstanceId: String, process: Process) extends Actor with ActorLogging {
   import ProcessInstanceActor._
 
@@ -21,6 +21,7 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
    * Map from tokens to the id of the flownode where the token
    * currently is.
    */
+  //for debugging: can follow which token will be sent to which node
   var tokens: Map[Token[_], String] = Map()
 
   var variables: Map[String, Any] = Map()
@@ -47,6 +48,7 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
       target ! IncomingToken(token, sequenceFlowRef)
     }
     case CreateToken(oldtoken, sequenceFlowRef) => {
+      //looks up where to go
       val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
       val targetNode = sequenceFlow.getTarget.getId
       val target = flowNodeActors(targetNode)

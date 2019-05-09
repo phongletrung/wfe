@@ -64,5 +64,21 @@
     <orderEntry type="library" scope="TEST" name="sbt: org.typelevel:cats-macros_2.12:0.9.0:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.typelevel:machinist_2.12:0.6.1:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.typelevel:macro-compat_2.12:1.1.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jffi:1.2.16:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jffi:1.2.16:native:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jnr-constants:0.9.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jnr-ffi:2.1.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jnr-x86asm:1.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-cluster-sharding_2.12:2.5.22:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-cluster-tools_2.12:2.5.22:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-coordination_2.12:2.5.22:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-distributed-data_2.12:2.5.22:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-persistence_2.12:2.5.22:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.lmdbjava:lmdbjava:0.6.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-analysis:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-commons:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-tree:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-util:5.0.3:jar" level="project" />
   </component>
 </module>

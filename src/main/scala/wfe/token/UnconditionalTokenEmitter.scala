@@ -11,6 +11,7 @@ import wfe.token.Tok.Token
 trait UnconditionalTokenEmitter extends TokenEmitter[FlowNode] {
   def emitTokens(existingTokens: Seq[Token[_]], to: ActorRef) = {
     val targets = node.getOutgoing.asScala
+    //case: join gateway: one output, multiply inputs
     if (targets.size == 1 && node.getIncoming.size() > 1) {
       var keySet = scala.collection.mutable.Set[String]()
       var conflicted = scala.collection.mutable.Set[String]()
@@ -33,6 +34,7 @@ trait UnconditionalTokenEmitter extends TokenEmitter[FlowNode] {
       var tok = Token(id, Tok.State(result.toMap))
       sendAndDestroyTokens(Seq(tok), targets, to)
     } else {
+      //case: StartEvent, ServiceTask etc.
       sendAndDestroyTokens(existingTokens, targets, to)
     }
   }

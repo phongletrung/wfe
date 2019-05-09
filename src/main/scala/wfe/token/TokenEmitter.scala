@@ -16,13 +16,15 @@ trait TokenEmitter[N <: FlowNode] {
       case (token, target) =>
         to ! OutgoingToken(token, target.getId)
     }
-    // Create new tokens
+    // Create new tokens for example if there are one imcoming and multiple outgoing sequenceflow
+    //create copies of tokens
+    //pa you have 5 targets and 2 tokens: first two targets will be dropped and creates 3 new tokens
     targets.drop(existingTokens.size).foreach { target =>
       if (existingTokens.size > 1)
         throw new RuntimeException("Dont know how to")
       to ! CreateToken(existingTokens.headOption, target.getId)
     }
-    // Destroy obsolete tokens
+    // Destroy obsolete tokens at the EndEventActor
     existingTokens.drop(targets.size).foreach { obsoleteToken =>
       to ! DestroyToken(obsoleteToken)
     }
