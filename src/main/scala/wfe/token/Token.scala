@@ -5,7 +5,7 @@ object Tok {
 
   case class State(state: Map[String, Any])
 
-
+/*
   val stringToken = Token("x", "string")
   val intToken = Token("y",0)
   val boolToken = Token("z",true)
@@ -29,5 +29,5 @@ object Tok {
     case Some(s: String) =>
     case Some(i: Int) =>
     case Some(b: Boolean) =>
-  }
+  }*/
 }

@@ -17,6 +17,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-agent" % "2.5.22",
  "com.typesafe.akka" %% "akka-cluster" % "2.5.22",
   "com.typesafe.akka" %% "akka-cluster-sharding" % "2.5.22",
+  "com.google.code.gson" % "gson" % "2.8.5",
+
 
 "com.typesafe.akka" %% "akka-slf4j"   % "2.5.22",
 

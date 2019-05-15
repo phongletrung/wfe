@@ -1,18 +1,15 @@
 package wfe
 
-import scala.concurrent.{Await, Future}
-import scala.concurrent.duration.DurationInt
-import org.scalatest.{BeforeAndAfter, FunSpec}
 import akka.actor._
 import akka.pattern.ask
 import akka.testkit.TestProbe
 import akka.util.Timeout
+import org.scalatest.{BeforeAndAfter, FunSpec}
 import wfe.ProcessDefActor.{ProcessEvent, ProcessFinished, ProcessStarted, StartProcess}
-import wfe.ProcessInstanceActor.GetVariables
-import wfe.ProcessManager.Processes
 import wfe.util.ProcessParser
 
-import scala.io.Source
+import scala.concurrent.Future
+import scala.concurrent.duration.DurationInt
 
 class ProcessDefSpec extends FunSpec with BeforeAndAfter {
 
@@ -96,32 +93,32 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
     }
   }
 
-  describe("A process with a wait state") {
-    it("has the process variables with which it is started") {
-      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], processWithWait), name = "process")
-
-      // TODO, is this the right way?
-      implicit val ec = system.dispatcher
-
-      val variables = Await.result(
-        for (
-          actorRef ← (processDefActor ? StartProcess(Map("foo" -> "bar"))).mapTo[ActorRef];
-          variables ← (actorRef ? GetVariables).mapTo[Map[String, String]]
-        ) yield variables,
-        500.millis)
-
-      assert(variables.get("foo") == Some("bar"))
-    }
-  }
-describe("End to end process engine tests") {
-  it("Parallel Join works") {
-    val parallelJoin = ProcessManager.parseProcess(Source.fromResource("parallelJoin.xml").mkString)
-
-    val system = ActorSystem("bpmn")
-    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
-    processManager ! ProcessManager.Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
-    println(parallelJoin)
-  }
-
-}
+//  describe("A process with a wait state") {
+//    it("has the process variables with which it is started") {
+//      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], processWithWait), name = "process")
+//
+//      // TODO, is this the right way?
+//      implicit val ec = system.dispatcher
+//
+//      val variables = Await.result(
+//        for (
+//          actorRef ← (processDefActor ? StartProcess(Map("foo" -> "bar"))).mapTo[ActorRef];
+//          variables ← (actorRef ? GetVariables).mapTo[Map[String, String]]
+//        ) yield variables,
+//        500.millis)
+//
+//      assert(variables.get("foo") == Some("bar"))
+//    }
+//  }
+//describe("End to end process engine tests") {
+//  it("Parallel Join works") {
+//    val parallelJoin = ProcessManager.parseProcess(Source.fromResource("parallelJoin.xml").mkString)
+//
+//    val system = ActorSystem("bpmn")
+//    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
+//    processManager ! ProcessManager.Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
+//    println(parallelJoin)
+//  }
+//
+//}
 }

@@ -1,6 +1,7 @@
 package wfe
 
-import akka.actor.{Actor, ActorLogging, ActorRef, actorRef2Scala}
+import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, LocalScope, actorRef2Scala}
+import akka.cluster.Cluster
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 import wfe.ProcessDefActor.StartProcess
 import wfe.flownodes.NodeActor
@@ -26,14 +27,26 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
 
   var variables: Map[String, Any] = Map()
 
-  val flowNodeActors: Map[String, ActorRef] =
-    process.getFlowElements.asScala.collect {
-      case node: FlowNode => node.getId -> NodeActor(node, processInstanceId)
-    }.toMap
+  var flowNodeActors: Map[String, ActorRef] = _
+
+  def createFlowNodeActors(): Map[String, ActorRef] = {
+    val cluster = Cluster(context.system)
+    val members = cluster.state.members
+    val other = members.find(!_.address.equals(cluster.selfAddress))
+    val target = other.getOrElse(cluster.selfMember).address
+    println("Main node is me")
+
+    if (flowNodeActors == null)
+      flowNodeActors = process.getFlowElements.asScala.collect {
+        case node: FlowNode => node.getId -> NodeActor(node, processInstanceId, Deploy(scope = LocalScope)) // Deploy(scope = RemoteScope(target)))
+      }.toMap
+    flowNodeActors
+  }
     
   def receive = {
     case StartProcess(variables) => {
       this.variables = variables
+      createFlowNodeActors()
       startNode foreach { startNode =>
         val actor = flowNodeActors(startNode.getId)
         context.system.eventStream.publish(ProcessDefActor.ProcessStarted(self))
