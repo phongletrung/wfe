@@ -2,7 +2,6 @@ package wfe.token
 object Tok {
 
   case class Token[T](id: String, value: T)
-
   case class State(state: Map[String, Any])
 
 /*

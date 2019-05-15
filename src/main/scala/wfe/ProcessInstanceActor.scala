@@ -34,14 +34,14 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
     val members = cluster.state.members
     val other = members.find(!_.address.equals(cluster.selfAddress))
     val target = other.getOrElse(cluster.selfMember).address
-    println("Main node is me")
+    println("Main node is me", process)
 
     if (flowNodeActors == null)
       flowNodeActors = process.getFlowElements.asScala.collect {
         case node: FlowNode => node.getId -> NodeActor(node, processInstanceId, Deploy(scope = LocalScope)) // Deploy(scope = RemoteScope(target)))
       }.toMap
     flowNodeActors
-  }
+ }
     
   def receive = {
     case StartProcess(variables) => {
