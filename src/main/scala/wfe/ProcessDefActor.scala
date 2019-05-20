@@ -14,7 +14,7 @@ object ProcessDefActor {
 
 class ProcessDefActor(process: String) extends Actor {
   import ProcessDefActor._
-  
+
   override def receive = {
     case msg: StartProcess => {
       val processInstanceId = nextId()

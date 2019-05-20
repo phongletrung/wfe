@@ -2,10 +2,12 @@ package wfe
 
 import java.io.{ByteArrayInputStream, StringReader}
 
-import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
+import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume, Stop}
+import akka.actor.{Actor, ActorLogging, ActorRef, OneForOneStrategy, Props, SupervisorStrategy, Terminated}
 import javax.xml.stream.XMLInputFactory
 import org.camunda.bpm.model.bpmn.Bpmn
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, Process}
+import scala.concurrent.duration._
 
 import scala.collection.JavaConverters._
 
@@ -69,12 +71,12 @@ object ProcessManager {
         currentProcesses -= ref
     }
 
-    //    override def supervisorStrategy: SupervisorStrategy = OneForOneStrategy(maxNrOfRetries = 20, withinTimeRange = 1 minute) {
-    //      case _: ArithmeticException => Resume
-    //      case _: NullPointerException => Restart
-    //      case _: IllegalArgumentException => Stop
-    //      case _: Exception => Escalate
-    //    }
+        override def supervisorStrategy: SupervisorStrategy = OneForOneStrategy(maxNrOfRetries = 20, withinTimeRange = 1 minute) {
+          case _: ArithmeticException => Resume
+          case _: NullPointerException => Restart
+          case _: IllegalArgumentException => Stop
+          case _: Exception => Escalate
+        }
   }
 
 //  def main(args: Array[String]): Unit = {

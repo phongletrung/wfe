@@ -6,6 +6,8 @@ import akka.testkit.TestProbe
 import akka.util.Timeout
 import org.scalatest.{BeforeAndAfter, FunSpec}
 import wfe.ProcessDefActor.{ProcessEvent, ProcessFinished, ProcessStarted, StartProcess}
+import wfe.ProcessManager.Processes
+import wfe.ProcessManager.Processes.CreateProcess
 
 import scala.concurrent.Future
 import scala.concurrent.duration.DurationInt
@@ -30,8 +32,8 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
   describe("A process") {
     it("can be started without process variables") {
 
-      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], process), name = "process")
-      val myProcessRef = processDefActor ? StartProcess()
+      val processDefActor = system.actorOf(Props(classOf[Processes]), name = "processManager")
+      val myProcessRef = processDefActor ? CreateProcess(Props(classOf[ProcessInstanceActor], "1", process), name="process")
       assert(myProcessRef.isInstanceOf[Future[_]])
     }
 
@@ -39,8 +41,8 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
       val probe1 = TestProbe()
       system.eventStream.subscribe(probe1.ref, classOf[ProcessEvent])
 
-      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], process), name = "process")
-      val myProcessRef = processDefActor ? StartProcess()
+      val processDefActor = system.actorOf(Props(classOf[Processes]), name = "processManager")
+      val myProcessRef = processDefActor ? CreateProcess(Props(classOf[ProcessInstanceActor], "1", process), name="process")
       assert(myProcessRef.isInstanceOf[Future[_]])
 
       val processInstance = probe1.expectMsgPF(500.millis) { case ProcessStarted(processInstance) ⇒ processInstance }

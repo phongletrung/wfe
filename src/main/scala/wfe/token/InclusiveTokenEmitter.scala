@@ -1,9 +1,7 @@
 package wfe.token
 
 import akka.actor._
-import de.odysseus.el.ExpressionFactoryImpl
-import de.odysseus.el.util.SimpleContext
-import org.camunda.bpm.model.bpmn.instance.{Gateway, SequenceFlow}
+import org.camunda.bpm.model.bpmn.instance.{FlowNode, Gateway}
 import wfe.token.Tok.Token
 
 import scala.collection.JavaConverters._
@@ -15,29 +13,61 @@ import scala.collection.JavaConverters._
 trait InclusiveTokenEmitter extends TokenEmitter[Gateway] {
   def emitTokens(existingTokens: Seq[Token[_]], to: ActorRef) = {
     val potentialTargets = node.getOutgoing().asScala
-    if (existingTokens.size > 1)
-      throw new RuntimeException("should not happen")
-    val targets = potentialTargets.filter(evaluateCondition(_, existingTokens.head))
+
+    //case: join gateway: one output, multiply inputs
+    if (potentialTargets.size == 1 && node.getIncoming.size() > 1) {
+      var keySet = scala.collection.mutable.Set[String]()
+      var conflicted = scala.collection.mutable.Set[String]()
+      var result = scala.collection.mutable.Map[String, Any]()
+      val id = existingTokens.head.id
+      existingTokens.foreach {
+        case Token(id: String, s: Tok.State) =>
+          s.state.foreach {
+            case (k: String, v) => if (keySet.contains(k)) conflicted.add(k) else keySet.add(k)
+          }
+        case _ => println("Unable to merge token, no map")
+      }
+      existingTokens.foreach {
+        case Token(id: String, s: Tok.State) =>
+          s.state.foreach {
+            case (k: String, v) => {
+              if (!k.equals("asdasdasdasda" + "_targets")) {
+                if (conflicted.contains(k)) result(k + "_token_" + id) = v else result(k) = v
+              }
+            }
+          }
+        case _ => println("Unable to merge token, no map")
+      }
+      var tok = Token(id, Tok.State(result.toMap))
+      sendAndDestroyTokens(Seq(tok), potentialTargets, to)
+    } else {
+
+      val targets = potentialTargets.filter(evaluateCondition(_, existingTokens.head))
       //      .orElse(defaultFlow)
       // BOOM!
-    if (targets.isEmpty){
-      throw new RuntimeException("Didn't find a suitable outgoing flow!")
-    }
+      val numTargets = targets.size
+      //if left side of or (split)
+      if (numTargets > 1) {
+        val curToken = existingTokens.head
+        // find the corresponding merge? TODO
+        val mergeName = "asdasdasdasda"
+        val newToken =
+          curToken match {
+            case Token(id, s: Tok.State) =>
+              Token(id, Tok.State(s.state.updated(mergeName + "_targets", numTargets)))
+            case t: Token[_] => t
+          }
+        sendAndDestroyTokens(Seq(newToken), targets, to)
+      }
+      if (targets.isEmpty){
+        throw new RuntimeException("Didn't find a suitable outgoing flow!")
+      }
 
-    sendAndDestroyTokens(existingTokens, targets, to)
+    }
   }
 
-  def evaluateCondition(flow: SequenceFlow, token: Token[_]) = flow.getConditionExpression match {
-    case null => false // This is an unconditional flow
-    case conditionExpression => {
-      val factory = new ExpressionFactoryImpl
-      val context = new SimpleContext
-//      val asd = conditionExpression.getTextContent
-      context.setVariable("input", factory.createValueExpression(token.value, java.lang.Integer.TYPE))
-      val e = factory.createValueExpression(context, conditionExpression.getTextContent, java.lang.Boolean.TYPE)
-      e.getValue(context) == true
-      //      conditionExpression.toBoolean
-    }
+  def findCorrespondingMergeNode(start: Seq[FlowNode], asd: Int) = {
+
   }
 
   //  def defaultFlow = Option(node..getOutgoing.getDefaultFlow).flatMap { sequenceFlowRef =>

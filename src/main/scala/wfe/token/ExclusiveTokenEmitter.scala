@@ -1,9 +1,7 @@
 package wfe.token
 
 import akka.actor._
-import de.odysseus.el.ExpressionFactoryImpl
-import de.odysseus.el.util.SimpleContext
-import org.camunda.bpm.model.bpmn.instance.{Gateway, SequenceFlow}
+import org.camunda.bpm.model.bpmn.instance.Gateway
 import wfe.token.Tok.Token
 
 import scala.collection.JavaConverters._
@@ -31,32 +29,6 @@ trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
     }
 
 
-  }
-
-  def evaluateCondition(flow: SequenceFlow, token: Token[_]) = flow.getConditionExpression match {
-    case null => false // This is an unconditional flow
-    case conditionExpression => {
-      val factory = new ExpressionFactoryImpl
-      val context = new SimpleContext
-
-      token match {
-        case Token(id: String, s: Tok.State) =>
-          s.state.foreach {
-            case (k, v) => v match {
-              case st: String => context.setVariable(k, factory.createValueExpression(st, classOf[String]))
-              case i: Integer => context.setVariable(k, factory.createValueExpression(i, classOf[Integer]))
-              case b: Boolean => context.setVariable(k, factory.createValueExpression(b, classOf[java.lang.Boolean]))
-              case _ => println("Unknown variable", k, v)
-            }
-          }
-      }
-      var condition = conditionExpression.getTextContent
-      if (condition.length > 0 && condition.charAt(0) != '$')
-        condition = "$" + condition
-      val e = factory.createValueExpression(context, condition, classOf[java.lang.Boolean])
-      e.getValue(context) == true
-//      conditionExpression.toBoolean
-    }
   }
 
 //  def defaultFlow = Option(node..getOutgoing.getDefaultFlow).flatMap { sequenceFlowRef =>
