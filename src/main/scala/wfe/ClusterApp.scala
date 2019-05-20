@@ -2,7 +2,7 @@ package wfe
 
 import akka.actor.{ActorSystem, Props}
 import akka.cluster.Cluster
-import wfe.ProcessManager.{Processes, parseProcess}
+import wfe.ProcessManager.Processes
 
 import scala.concurrent.duration._
 import scala.io.Source
@@ -17,11 +17,11 @@ object ClusterApp extends App {
 
   sys.addShutdownHook(system.terminate())
 
-  system.scheduler.scheduleOnce(10 second) {
+  system.scheduler.scheduleOnce(5 second) {
     if (cluster.selfAddress.equals(cluster.state.getLeader)) {
-      val parallelJoin = parseProcess(Source.fromResource("string.xml").mkString)
+      val processAsString = Source.fromResource("ab.xml").mkString
       val processManager = system.actorOf(Props(classOf[Processes]), "processmanager")
-      processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
+      processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], processAsString), "process1")
     }
   }(system.getDispatcher)
 //

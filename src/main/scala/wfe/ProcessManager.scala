@@ -5,20 +5,25 @@ import java.io.{ByteArrayInputStream, StringReader}
 import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
 import javax.xml.stream.XMLInputFactory
 import org.camunda.bpm.model.bpmn.Bpmn
-import org.camunda.bpm.model.bpmn.instance.Process
+import org.camunda.bpm.model.bpmn.instance.{FlowElement, Process}
 
 import scala.collection.JavaConverters._
 
 
 object ProcessManager {
-  def parseProcess(process: String) = {
+  def parseProcess(process: String) : Process = {
     val reader = new StringReader(process)
     val factory = XMLInputFactory.newInstance()
     val streamReader = factory.createXMLStreamReader(reader)
     val model = Bpmn.readModelFromStream(new ByteArrayInputStream(process.getBytes))
-    val process1 = model.getModelElementsByType(model.getModel.getType(classOf[Process])).asScala.head
-    var cnt = 0
+    val process1: Process = model.getModelElementsByType(model.getModel.getType(classOf[Process])).asScala.head.asInstanceOf[Process]
     process1
+  }
+
+
+  def getFlowElementById(processS: String, id: String) : FlowElement = {
+    val process = parseProcess(processS)
+    process.getFlowElements.asScala.filter(element => element.getId.equals(id)).head
   }
 
   ////    override def preStart = Cluster(context.system).subscribe(self, classOf[ClusterDomainEvent])
@@ -85,7 +90,7 @@ object ProcessManager {
 //    val xortest = parseProcess(Source.fromResource("xortest.xml").mkString)
 //    val xorarbitrary = parseProcess(Source.fromResource("xorarbitrary.xml").mkString)
 //    val simpleservicetaskonly = parseProcess(Source.fromResource("simpleservicetaskonly.xml").mkString)
-//    val newtest = parseProcess(Source.fromResource("newtest.xml").mkString)
+//    val newtest = parseProcess(Source.fromResource("xorServiceAndJoin.xml").mkString)
 //    val ab = parseProcess(Source.fromResource("ab.xml").mkString)
 //
 //

@@ -1,7 +1,8 @@
 package wfe
 
-import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, LocalScope, actorRef2Scala}
-import akka.cluster.Cluster
+import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, actorRef2Scala}
+import akka.cluster.{Cluster, Member}
+import akka.remote.RemoteScope
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 import wfe.ProcessDefActor.StartProcess
 import wfe.flownodes.NodeActor
@@ -15,7 +16,7 @@ object ProcessInstanceActor {
   case object GetVariables
 }
 //has the whole process model in process: Process
-class ProcessInstanceActor(processInstanceId: String, process: Process) extends Actor with ActorLogging {
+class ProcessInstanceActor(processInstanceId: String, processAsString: String) extends Actor with ActorLogging {
   import ProcessInstanceActor._
 
   /**
@@ -27,18 +28,24 @@ class ProcessInstanceActor(processInstanceId: String, process: Process) extends 
 
   var variables: Map[String, Any] = Map()
 
+  var process: Process = ProcessManager.parseProcess(processAsString)
+
   var flowNodeActors: Map[String, ActorRef] = _
 
   def createFlowNodeActors(): Map[String, ActorRef] = {
     val cluster = Cluster(context.system)
-    val members = cluster.state.members
-    val other = members.find(!_.address.equals(cluster.selfAddress))
-    val target = other.getOrElse(cluster.selfMember).address
-    println("Main node is me", process)
+    val members = cluster.state.members.toArray
+    var cur: Int = 0
+//    println("Main node is me", process)
 
     if (flowNodeActors == null)
       flowNodeActors = process.getFlowElements.asScala.collect {
-        case node: FlowNode => node.getId -> NodeActor(node, processInstanceId, Deploy(scope = LocalScope)) // Deploy(scope = RemoteScope(target)))
+        case node: FlowNode => node.getId -> {
+          // round robin
+          val target: Member = members.apply(cur % members.length)
+          cur += 1
+          NodeActor(node, processAsString, processInstanceId, Deploy(scope = RemoteScope(target.address)))
+        }
       }.toMap
     flowNodeActors
  }

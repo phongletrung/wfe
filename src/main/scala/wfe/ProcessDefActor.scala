@@ -1,7 +1,6 @@
 package wfe
 
-import akka.actor.{ Actor, ActorRef, Props, actorRef2Scala}
-import org.camunda.bpm.model.bpmn.instance.Process
+import akka.actor.{Actor, ActorRef, Props, actorRef2Scala}
 
 
 
@@ -13,13 +12,13 @@ object ProcessDefActor {
   case class ProcessFinished(processInstance: ActorRef, variables: Map[String, Any]) extends ProcessEvent
 }
 
-class ProcessDefActor(processModel: Process) extends Actor {
+class ProcessDefActor(process: String) extends Actor {
   import ProcessDefActor._
   
   override def receive = {
     case msg: StartProcess => {
       val processInstanceId = nextId()
-      val processInstanceActor = context.actorOf(Props(classOf[ProcessInstanceActor], processInstanceId, processModel))
+      val processInstanceActor = context.actorOf(Props(classOf[ProcessInstanceActor], processInstanceId, process))
       processInstanceActor ! msg
       sender ! processInstanceActor
     }

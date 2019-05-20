@@ -25,6 +25,7 @@ trait TokenEmitter[N <: FlowNode] {
       to ! CreateToken(existingTokens.headOption, target.getId)
     }
     // Destroy obsolete tokens at the EndEventActor
+    //still token but no targets
     existingTokens.drop(targets.size).foreach { obsoleteToken =>
       to ! DestroyToken(obsoleteToken)
     }

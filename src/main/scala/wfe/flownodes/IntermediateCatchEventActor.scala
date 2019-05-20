@@ -1,14 +1,16 @@
 package wfe.flownodes
 
 import akka.actor.{Actor, ActorLogging}
-import wfe.IncomingToken
-import wfe.token.UnconditionalTokenEmitter
 import org.camunda.bpm.model.bpmn.instance.IntermediateCatchEvent
+import wfe.token.UnconditionalTokenEmitter
+import wfe.{IncomingToken, ProcessManager}
 
 import scala.concurrent.duration._
 
 
-class IntermediateCatchEventActor(val node: IntermediateCatchEvent) extends Actor with ActorLogging with UnconditionalTokenEmitter {
+class IntermediateCatchEventActor(val nodeId: String, val process: String) extends Actor with ActorLogging with UnconditionalTokenEmitter {
+  val node: IntermediateCatchEvent = ProcessManager.getFlowElementById(process, nodeId).asInstanceOf[IntermediateCatchEvent]
+
   def receive = {
     case IncomingToken(token, _) => {
       log.info("Received token in IntermediateCatchEvent")

@@ -24,28 +24,7 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
     system.terminate
   }
 
-//  val process = ProcessParser.parseProcess(
-//    <process id="testProcess" name="TestProcess" isExecutable="true">
-//      <startEvent id="startevent1" name="Start"></startEvent>
-//      <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="endevent1"></sequenceFlow>
-//      <endEvent id="endevent1" name="End"></endEvent>
-//    </process>)
-//
-//
-//  val processWithWait = ProcessManager.parseProcess(
-//
-// <?xml version="1.0" encoding="UTF-8"?>
-// <bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.9.0">
-//   <process id="testProcess" name="TestProcess" isExecutable="true">
-//      <startEvent id="startevent1" name="Start"></startEvent>
-//      <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="usertask1"></sequenceFlow>
-//      <userTask id="usertask1" name="UserTask1"></userTask>
-//      <sequenceFlow id="flow1" sourceRef="usertask1" targetRef="usertask1"></sequenceFlow>
-//      <endEvent id="endevent1" name="End"></endEvent>
-//    </process>
-//    </bpmn:definitions>
-// |
-//    """)
+
     val process = ProcessManager.parseProcess(Source.fromResource("test-process1.xml").mkString)
 
   describe("A process") {
@@ -106,7 +85,6 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
 //    it("has the process variables with which it is started") {
 //      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], processWithWait), name = "process")
 //
-//      // TODO, is this the right way?
 //      implicit val ec = system.dispatcher
 //
 //      val variables = Await.result(

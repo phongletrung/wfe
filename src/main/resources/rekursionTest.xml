@@ -12,13 +12,13 @@
         </bpmn:exclusiveGateway>
         <bpmn:sequenceFlow id="SequenceFlow_1e0oe04" sourceRef="Task_0wzqa3i" targetRef="ExclusiveGateway_0uo9ui8" />
         <bpmn:sequenceFlow id="SequenceFlow_01hax3h" sourceRef="ExclusiveGateway_0uo9ui8" targetRef="Task_07ip4qh">
-            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a > 8}$]]></bpmn:conditionExpression>
+            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a > 10}]]></bpmn:conditionExpression>
         </bpmn:sequenceFlow>
         <bpmn:endEvent id="EndEvent_1koms4n">
             <bpmn:incoming>SequenceFlow_1y8sq1o</bpmn:incoming>
         </bpmn:endEvent>
         <bpmn:sequenceFlow id="SequenceFlow_1y8sq1o" sourceRef="Task_07ip4qh" targetRef="EndEvent_1koms4n" />
-        <bpmn:serviceTask id="Task_0wzqa3i" name="IncreaseByEight" camunda:class="wfe,IncreaseByEight$">
+        <bpmn:serviceTask id="Task_0wzqa3i" name="IncreaseByEight" camunda:class="wfe.IncreaseByEight$">
             <bpmn:incoming>SequenceFlow_1jpnr2m</bpmn:incoming>
             <bpmn:incoming>SequenceFlow_18f313p</bpmn:incoming>
             <bpmn:outgoing>SequenceFlow_1e0oe04</bpmn:outgoing>
@@ -28,7 +28,7 @@
             <bpmn:outgoing>SequenceFlow_1y8sq1o</bpmn:outgoing>
         </bpmn:serviceTask>
         <bpmn:sequenceFlow id="SequenceFlow_18f313p" sourceRef="ExclusiveGateway_0uo9ui8" targetRef="Task_0wzqa3i">
-            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a < 8}$]]></bpmn:conditionExpression>
+            <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression"><![CDATA[{a < 9}]]></bpmn:conditionExpression>
         </bpmn:sequenceFlow>
     </bpmn:process>
     <bpmndi:BPMNDiagram id="BPMNDiagram_1">

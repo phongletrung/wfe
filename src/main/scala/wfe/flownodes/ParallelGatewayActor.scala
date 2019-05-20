@@ -1,15 +1,18 @@
 package wfe.flownodes
 
 import akka.actor._
-import wfe.IncomingToken
-import wfe.token.{UnconditionalTokenEmitter}
 import org.camunda.bpm.model.bpmn.instance.ParallelGateway
 import wfe.token.Tok.Token
+import wfe.token.UnconditionalTokenEmitter
+import wfe.{IncomingToken, ProcessManager}
 
 import scala.collection.JavaConverters._
 
-class ParallelGatewayActor(val node: ParallelGateway) extends Actor with ActorLogging with UnconditionalTokenEmitter {
+class ParallelGatewayActor(val nodeId: String, val process: String) extends Actor with ActorLogging with UnconditionalTokenEmitter {
   // Map from SequenceFlowRef to tokens
+
+  val node: ParallelGateway = ProcessManager.getFlowElementById(process, nodeId).asInstanceOf[ParallelGateway]
+
   var tokenBuffers: Map[String, Seq[Token[_]]] =
     node.getIncoming.asScala.map(_.getId -> Nil).toMap
 

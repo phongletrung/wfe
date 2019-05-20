@@ -1,11 +1,15 @@
 package wfe.flownodes
 
 import akka.actor._
+import org.camunda.bpm.model.bpmn.instance.StartEvent
+import wfe.ProcessManager
 import wfe.flownodes.NodeActor._
 import wfe.token.UnconditionalTokenEmitter
-import org.camunda.bpm.model.bpmn.instance.StartEvent
 
-class StartEventActor(val node: StartEvent) extends Actor with ActorLogging with UnconditionalTokenEmitter {
+class StartEventActor(val nodeId: String, val process: String) extends Actor with ActorLogging with UnconditionalTokenEmitter {
+
+  val node: StartEvent = ProcessManager.getFlowElementById(process, nodeId).asInstanceOf[StartEvent]
+
   def receive = {
     case Start => emitTokens(Nil, sender)
   }
