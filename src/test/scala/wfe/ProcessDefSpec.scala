@@ -25,7 +25,7 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
   }
 
 
-    val process = ProcessManager.parseProcess(Source.fromResource("test-process1.xml").mkString)
+    val process: String = Source.fromResource("test-process1.xml").mkString
 
   describe("A process") {
     it("can be started without process variables") {

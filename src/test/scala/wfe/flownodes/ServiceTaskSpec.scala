@@ -5,7 +5,6 @@ import akka.pattern.ask
 import akka.testkit.TestKit
 import akka.util.Timeout
 import wfe.ProcessDefActor
-import wfe.util.ProcessParser
 import org.scalatest.{BeforeAndAfter, FunSpecLike}
 
 import scala.concurrent.Await
@@ -35,11 +34,8 @@ class ServiceTaskSpec(_system: ActorSystem) extends TestKit(_system) with FunSpe
  		<endEvent id="endevent1" name="End"></endEvent>
       </process>
 
-    val process1 = ProcessParser.parseProcess(
-      xml)
-
     it("executes the service task") {
-      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], process1), name = "process1")
+      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], xml.mkString), name = "process1")
       val processInstanceRefFuture = processDefActor ? ProcessDefActor.StartProcess()
       Await.ready(processInstanceRefFuture, 500.millis)
 

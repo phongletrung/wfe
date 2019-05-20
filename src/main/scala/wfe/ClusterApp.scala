@@ -10,8 +10,8 @@ import scala.io.Source
 object ClusterApp extends App {
   import ClusteringConfig._
 
-  implicit val system = ActorSystem(clusterName)
-  implicit val cluster = Cluster(system)
+  implicit val system: ActorSystem = ActorSystem(clusterName)
+  implicit val cluster: Cluster = Cluster(system)
 
   val clusterListener = system.actorOf(Props[ClusterListener], name = "clusterListener")
 
