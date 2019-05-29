@@ -1,8 +1,7 @@
 package wfe
 
-import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, actorRef2Scala}
+import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, LocalScope, actorRef2Scala}
 import akka.cluster.{Cluster, Member}
-import akka.remote.RemoteScope
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 import wfe.flownodes.NodeActor
 import wfe.flownodes.NodeActor._
@@ -49,13 +48,13 @@ class ProcessInstanceActor(processInstanceId: String, processAsString: String) e
           // round robin
           val target: Member = members.apply(cur % members.length)
           cur += 1
-          NodeActor(node, processAsString, processInstanceId, Deploy(scope = RemoteScope(target.address)))
+          NodeActor(node, processAsString, processInstanceId, Deploy(scope = LocalScope)) //RemoteScope(target.address)))
         }
       }.toMap
     flowNodeActors
  }
     
-  def receive = {
+  def receive: PartialFunction[Any, Unit] = {
     case StartProcess(variables) => {
       this.variables = variables
       createFlowNodeActors()

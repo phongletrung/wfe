@@ -26,7 +26,7 @@ class ServiceTaskActor(val nodeId: String, val process: String) extends Actor wi
    }
   
 
-  def receive = {
+  def receive: PartialFunction[Any, Unit] = {
     case IncomingToken(token: Token[_], _) =>
       log.info("Servicetask received a token")
       val updatedToken = delegate(token)

@@ -11,8 +11,8 @@ import scala.concurrent.duration._
 class IntermediateCatchEventActor(val nodeId: String, val process: String) extends Actor with ActorLogging with UnconditionalTokenEmitter {
   val node: IntermediateCatchEvent = ProcessManager.getFlowElementById(process, nodeId).asInstanceOf[IntermediateCatchEvent]
 
-  def receive = {
-    case IncomingToken(token, _) => {
+  def receive: PartialFunction[Any, Unit] = {
+    case IncomingToken(token, _) =>
       log.info("Received token in IntermediateCatchEvent")
       log.info("waiting")
       val originalSender = sender()
@@ -22,6 +22,5 @@ class IntermediateCatchEventActor(val nodeId: String, val process: String) exten
         emitTokens(Seq(token), originalSender)
       }(context.system.getDispatcher)
       println(context.system.getDispatcher)
-    }
   }
 }

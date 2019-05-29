@@ -24,8 +24,5 @@ object ClusterApp extends App {
       processManager ! Processes.CreateProcess(Props(classOf[ProcessInstanceActor], "1", processAsString), "process1")
     }
   }(system.getDispatcher)
-//
-//  sys.addShutdownHook(system.terminate())
-
 }
 

@@ -16,8 +16,8 @@ class ParallelGatewayActor(val nodeId: String, val process: String) extends Acto
   var tokenBuffers: Map[String, Seq[Token[_]]] =
     node.getIncoming.asScala.map(_.getId -> Nil).toMap
 
-  def receive = {
-    case IncomingToken(token, sequenceFlowRef) => {
+  def receive: PartialFunction[Any, Unit] = {
+    case IncomingToken(token, sequenceFlowRef) =>
 
       log.info("Received a token in Parallel Gateway")
       //saves token in a map and waits until for every incoming sequence receives a token
@@ -32,7 +32,6 @@ class ParallelGatewayActor(val nodeId: String, val process: String) extends Acto
         tokenBuffers = tokenBuffers mapValues (_.tail)
         emitTokens(tokens.toSeq, sender)
       }
-    }
   }
 
 }

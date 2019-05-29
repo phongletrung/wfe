@@ -13,8 +13,8 @@ class InclusiveGatewayActor(val nodeId: String, val process: String) extends Act
   var tokenBuffers: Seq[Token[_]] = Seq()
   var targetLength: Option[Int] = None
 
-  def receive = {
-    case IncomingToken(token, sequenceFlowRef) => {
+  def receive: PartialFunction[Any, Unit] = {
+    case IncomingToken(token, sequenceFlowRef) =>
       if (node.getIncoming.size() > 1) {
         targetLength = token match {
           case Token(id, s: Tok.State) => s.state.get("orjoin" + "_targets").asInstanceOf[Option[Int]]
@@ -28,6 +28,5 @@ class InclusiveGatewayActor(val nodeId: String, val process: String) extends Act
       } else {
         emitTokens(Seq(token), sender)
       }
-    }
   }
 }

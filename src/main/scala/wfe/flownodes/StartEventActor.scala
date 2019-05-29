@@ -10,7 +10,7 @@ class StartEventActor(val nodeId: String, val process: String) extends Actor wit
 
   val node: StartEvent = ProcessManager.getFlowElementById(process, nodeId).asInstanceOf[StartEvent]
 
-  def receive = {
+  def receive: PartialFunction[Any, Unit] = {
     case Start => emitTokens(Nil, sender)
   }
 }

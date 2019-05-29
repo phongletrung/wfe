@@ -15,7 +15,7 @@ import scala.io.Source
 
 class ProcessInstanceSpec extends FunSpec with BeforeAndAfter {
 
-  implicit val timeout: Timeout = Timeout(1.seconds)
+  implicit val timeout = Timeout(1.seconds)
   implicit var system: ActorSystem = _
 
   before {
