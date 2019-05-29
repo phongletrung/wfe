@@ -17,7 +17,7 @@ class InclusiveGatewayActor(val nodeId: String, val process: String) extends Act
     case IncomingToken(token, sequenceFlowRef) => {
       if (node.getIncoming.size() > 1) {
         targetLength = token match {
-          case Token(id, s: Tok.State) => s.state.get("asdasdasdasda" + "_targets").asInstanceOf[Option[Int]]
+          case Token(id, s: Tok.State) => s.state.get("orjoin" + "_targets").asInstanceOf[Option[Int]]
         }
         tokenBuffers = tokenBuffers :+ token
         //checks if there is one token for each incoming sequence flow (important for merge because if it is a split)

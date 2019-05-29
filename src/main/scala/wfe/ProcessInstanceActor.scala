@@ -4,7 +4,6 @@ import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, actorRef2Scala}
 import akka.cluster.{Cluster, Member}
 import akka.remote.RemoteScope
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
-import wfe.ProcessDefActor.StartProcess
 import wfe.flownodes.NodeActor
 import wfe.flownodes.NodeActor._
 import wfe.token.Tok
@@ -12,9 +11,15 @@ import wfe.token.Tok.Token
 
 import scala.collection.JavaConverters.collectionAsScalaIterableConverter
 
+
 object ProcessInstanceActor {
-  case object GetVariables
+  case class StartProcess(variables: Map[String, Any] = Map.empty)
+
+  sealed trait ProcessEvent
+  case class ProcessStarted(processInstance: ActorRef) extends ProcessEvent
+  case class ProcessFinished(processInstance: ActorRef, variables: Map[String, Any]) extends ProcessEvent
 }
+
 //has the whole process model in process: Process
 class ProcessInstanceActor(processInstanceId: String, processAsString: String) extends Actor with ActorLogging {
   import ProcessInstanceActor._
@@ -56,7 +61,7 @@ class ProcessInstanceActor(processInstanceId: String, processAsString: String) e
       createFlowNodeActors()
       startNode foreach { startNode =>
         val actor = flowNodeActors(startNode.getId)
-        context.system.eventStream.publish(ProcessDefActor.ProcessStarted(self))
+        context.system.eventStream.publish(ProcessInstanceActor.ProcessStarted(self))
         actor ! Start
       }
     }
@@ -79,7 +84,7 @@ class ProcessInstanceActor(processInstanceId: String, processAsString: String) e
     case DestroyToken(token) => {
       tokens -= token
       if (tokens.isEmpty) {
-        context.system.eventStream.publish(ProcessDefActor.ProcessFinished(self, variables))
+        context.system.eventStream.publish(ProcessInstanceActor.ProcessFinished(self, variables))
         context.stop(self)
       }
     }
@@ -88,8 +93,6 @@ class ProcessInstanceActor(processInstanceId: String, processAsString: String) e
       val target = flowNodeActors(nodeRef)
       target ! m
     }
-
-    case GetVariables => sender ! variables
   }
 
 

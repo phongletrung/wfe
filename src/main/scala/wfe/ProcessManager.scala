@@ -7,9 +7,9 @@ import akka.actor.{Actor, ActorLogging, ActorRef, OneForOneStrategy, Props, Supe
 import javax.xml.stream.XMLInputFactory
 import org.camunda.bpm.model.bpmn.Bpmn
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, Process}
-import scala.concurrent.duration._
 
 import scala.collection.JavaConverters._
+import scala.concurrent.duration._
 
 
 object ProcessManager {
@@ -64,7 +64,7 @@ object ProcessManager {
         val ref = context.actorOf(p, name)
         currentProcesses += ref
         context watch ref
-        ref ! ProcessDefActor.StartProcess()
+        ref ! ProcessInstanceActor.StartProcess()
         println(s"Currently executing ${currentProcesses.size} processes")
       case Terminated(ref) =>
         log.info("Actor terminated....")
@@ -96,13 +96,15 @@ object ProcessManager {
 //    val ab = parseProcess(Source.fromResource("ab.xml").mkString)
 //
 //
+
 //    val system = ActorSystem("bpmn")
 //
 //
-//    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
+//    val processManager: ActorRef = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
 //        processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], ab), "process1")
 ////    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelWithIntermediate), "process2")
-//    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], rekursionTest), "process3")
+
+//        processManager ! Processes.CreateProcess(Props(classOf[ProcessInstanceActor], "1", rekursionTest), "process3")
 ////        processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], stringtest), "process4")
 ////        processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], ab), "process5")
 //    //    processManager ! Processes.CreateProcess(Props(classOf[ProcessDefActor], xortest), "process5")

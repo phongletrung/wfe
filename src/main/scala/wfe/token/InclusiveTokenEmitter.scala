@@ -31,7 +31,7 @@ trait InclusiveTokenEmitter extends TokenEmitter[Gateway] {
         case Token(id: String, s: Tok.State) =>
           s.state.foreach {
             case (k: String, v) => {
-              if (!k.equals("asdasdasdasda" + "_targets")) {
+              if (!k.equals("orjoin" + "_targets")) {
                 if (conflicted.contains(k)) result(k + "_token_" + id) = v else result(k) = v
               }
             }
@@ -50,7 +50,7 @@ trait InclusiveTokenEmitter extends TokenEmitter[Gateway] {
       if (numTargets > 1) {
         val curToken = existingTokens.head
         // find the corresponding merge? TODO
-        val mergeName = "asdasdasdasda"
+        val mergeName = "orjoin"
         val newToken =
           curToken match {
             case Token(id, s: Tok.State) =>

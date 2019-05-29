@@ -5,7 +5,7 @@ import akka.pattern.ask
 import akka.testkit.TestProbe
 import akka.util.Timeout
 import org.scalatest.{BeforeAndAfter, FunSpec}
-import wfe.ProcessDefActor.{ProcessEvent, ProcessFinished, ProcessStarted, StartProcess}
+import wfe.ProcessInstanceActor.{ProcessEvent, ProcessFinished, ProcessStarted, StartProcess}
 import wfe.ProcessManager.Processes
 import wfe.ProcessManager.Processes.CreateProcess
 
@@ -13,9 +13,9 @@ import scala.concurrent.Future
 import scala.concurrent.duration.DurationInt
 import scala.io.Source
 
-class ProcessDefSpec extends FunSpec with BeforeAndAfter {
+class ProcessInstanceSpec extends FunSpec with BeforeAndAfter {
 
-  implicit val timeout = Timeout(1.seconds)
+  implicit val timeout: Timeout = Timeout(1.seconds)
   implicit var system: ActorSystem = _
 
   before {
@@ -52,7 +52,7 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
       val probe1 = TestProbe()
       system.eventStream.subscribe(probe1.ref, classOf[ProcessEvent])
 
-      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], process), name = "process")
+      val processDefActor = system.actorOf(Props(classOf[ProcessInstanceActor], "1", process), name = "process")
       val myProcessRef = processDefActor ? StartProcess()
       assert(myProcessRef.isInstanceOf[Future[_]])
 
@@ -62,7 +62,7 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
     }
 
     it("can be started with process variables") {
-      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], process), name = "process")
+      val processDefActor = system.actorOf(Props(classOf[ProcessInstanceActor], "1", process), name = "process")
       val myProcessRef = processDefActor ? StartProcess(Map("foo" -> "bar"))
       assert(myProcessRef.isInstanceOf[Future[_]])
     }
@@ -71,7 +71,7 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
       val probe1 = TestProbe()
       system.eventStream.subscribe(probe1.ref, classOf[ProcessEvent])
 
-      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], process), name = "process")
+      val processDefActor = system.actorOf(Props(classOf[ProcessInstanceActor], "1", process), name = "process")
       val variables1 = Map("foo" -> "bar")
       val myProcessRef = processDefActor ? StartProcess(variables1)
       assert(myProcessRef.isInstanceOf[Future[_]])
@@ -85,7 +85,7 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
 
 //  describe("A process with a wait state") {
 //    it("has the process variables with which it is started") {
-//      val processDefActor = system.actorOf(Props(classOf[ProcessDefActor], processWithWait), name = "process")
+//      val processDefActor = system.actorOf(Props(classOf[ProcessInstanceActor], "1", processWithWait), name = "process")
 //
 //      implicit val ec = system.dispatcher
 //
@@ -105,7 +105,7 @@ class ProcessDefSpec extends FunSpec with BeforeAndAfter {
 //
 //    val system = ActorSystem("bpmn")
 //    val processManager = system.actorOf(Props(classOf[Processes]), "processmanager") // /user/processmanager
-//    processManager ! ProcessManager.Processes.CreateProcess(Props(classOf[ProcessDefActor], parallelJoin), "process1")
+//    processManager ! ProcessManager.Processes.CreateProcess(Props(classOf[ProcessInstanceActor], "1", parallelJoin), "process1")
 //    println(parallelJoin)
 //  }
 //
