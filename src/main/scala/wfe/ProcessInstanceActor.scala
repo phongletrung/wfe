@@ -1,7 +1,8 @@
 package wfe
 
-import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, LocalScope, actorRef2Scala}
+import akka.actor.{Actor, ActorLogging, ActorRef, Deploy, actorRef2Scala}
 import akka.cluster.{Cluster, Member}
+import akka.remote.RemoteScope
 import org.camunda.bpm.model.bpmn.instance.{FlowElement, FlowNode, Process, SequenceFlow, StartEvent}
 import wfe.flownodes.NodeActor
 import wfe.flownodes.NodeActor._
@@ -40,38 +41,28 @@ class ProcessInstanceActor(processInstanceId: String, processAsString: String) e
     val cluster = Cluster(context.system)
     val members = cluster.state.members.toArray
     var cur: Int = 0
-//    println("Main node is me", process)
-
     if (flowNodeActors == null)
       flowNodeActors = process.getFlowElements.asScala.collect {
         case node: FlowNode => node.getId -> {
           // round robin
           val target: Member = members.apply(cur % members.length)
           cur += 1
-          NodeActor(node, processAsString, processInstanceId, Deploy(scope = LocalScope)) //RemoteScope(target.address)))
+          NodeActor(node, processAsString, processInstanceId, Deploy(scope = RemoteScope(target.address))) //RemoteScope(target.address)))
         }
       }.toMap
     flowNodeActors
  }
     
   def receive: PartialFunction[Any, Unit] = {
-    case StartProcess(variables) => {
-      this.variables = variables
+    case StartProcess(vars) =>
+      this.variables = vars
       createFlowNodeActors()
       startNode foreach { startNode =>
         val actor = flowNodeActors(startNode.getId)
         context.system.eventStream.publish(ProcessInstanceActor.ProcessStarted(self))
         actor ! Start
       }
-    }
-    case OutgoingToken(token, sequenceFlowRef) => {
-      val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
-      val targetNode = sequenceFlow.getTarget.getId
-      val target = flowNodeActors(targetNode)
-      tokens += token -> targetNode
-      target ! IncomingToken(token, sequenceFlowRef)
-    }
-    case CreateToken(oldtoken, sequenceFlowRef) => {
+    case CreateToken(oldtoken, sequenceFlowRef) =>
       //looks up where to go
       val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
       val targetNode = sequenceFlow.getTarget.getId
@@ -79,19 +70,20 @@ class ProcessInstanceActor(processInstanceId: String, processAsString: String) e
       val token = createToken(oldtoken.getOrElse(createToken(Tok.State(Map()))).value)
       tokens += token -> targetNode
       target ! IncomingToken(token, sequenceFlowRef)
-    }
-    case DestroyToken(token) => {
+
+    case OutgoingToken(token, sequenceFlowRef) =>
+      val sequenceFlow = process.getFlowElements.asScala.find(_.getId == sequenceFlowRef).head.asInstanceOf[SequenceFlow]
+      val targetNode = sequenceFlow.getTarget.getId
+      val target = flowNodeActors(targetNode)
+      tokens += token -> targetNode
+      target ! IncomingToken(token, sequenceFlowRef)
+
+    case DestroyToken(token) =>
       tokens -= token
       if (tokens.isEmpty) {
         context.system.eventStream.publish(ProcessInstanceActor.ProcessFinished(self, variables))
         context.stop(self)
       }
-    }
-
-    case m @ CompleteUserTask(nodeRef) => {
-      val target = flowNodeActors(nodeRef)
-      target ! m
-    }
   }
 
 
@@ -105,7 +97,7 @@ class ProcessInstanceActor(processInstanceId: String, processAsString: String) e
   def createToken[T](t:T) = Token(generateTokenId, t)
 
   var nextTokenId = 0
-  def generateTokenId = {
+  def generateTokenId: String = {
     val id = nextTokenId
     nextTokenId += 1
     id.toString

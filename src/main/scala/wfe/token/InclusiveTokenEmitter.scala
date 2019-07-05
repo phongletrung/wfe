@@ -44,12 +44,11 @@ trait InclusiveTokenEmitter extends TokenEmitter[Gateway] {
 
       val targets = potentialTargets.filter(evaluateCondition(_, existingTokens.head))
       //      .orElse(defaultFlow)
-      // BOOM!
       val numTargets = targets.size
       //if left side of or (split)
       if (numTargets > 1) {
         val curToken = existingTokens.head
-        // find the corresponding merge? TODO
+        // find the corresponding merge
         val mergeName = "orjoin"
         val newToken =
           curToken match {

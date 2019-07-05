@@ -19,11 +19,10 @@ class ParallelGatewayActor(val nodeId: String, val process: String) extends Acto
   def receive: PartialFunction[Any, Unit] = {
     case IncomingToken(token, sequenceFlowRef) =>
 
-      log.info("Received a token in Parallel Gateway")
+      log.info("Parallel Gateway received a token")
       //saves token in a map and waits until for every incoming sequence receives a token
       tokenBuffers += sequenceFlowRef -> (tokenBuffers(sequenceFlowRef) :+ token)
 
-      // Emit tokens if we
       val headTokenOptions = tokenBuffers.map(_._2.headOption)
       //checks if there is one token for each incoming sequence flow (important for merge because if it is a split)
       if (headTokenOptions forall (_.isDefined)) {

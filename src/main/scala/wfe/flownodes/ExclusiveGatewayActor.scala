@@ -10,7 +10,7 @@ class ExclusiveGatewayActor(val nodeId: String, val process: String) extends Act
 
   def receive: PartialFunction[Any, Unit] = {
     case IncomingToken( token, _) =>
-      log.info("Received token in Exclusive Gateway")
+      log.info("Exclusive Gateway received a token")
       emitTokens(Seq(token), sender)
   }
 }

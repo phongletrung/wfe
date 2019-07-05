@@ -20,10 +20,8 @@ trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
         throw new RuntimeException("should not happen")
       }
       val target = potentialTargets.find(evaluateCondition(_, existingTokens.head))
-        //      .orElse(defaultFlow)
         .getOrElse {
-        // BOOM!
-        throw new RuntimeException("Didn't find a suitable outgoing flow!")
+        throw new RuntimeException("No outgoing flow!")
       }
       sendAndDestroyTokens(existingTokens, Seq(target), to)
     }
@@ -31,8 +29,5 @@ trait ExclusiveTokenEmitter extends TokenEmitter[Gateway] {
 
   }
 
-//  def defaultFlow = Option(node..getOutgoing.getDefaultFlow).flatMap { sequenceFlowRef =>
-//    node.getOutgoingFlows().asScala.find(_.getId == sequenceFlowRef)
-//  }
 
 }

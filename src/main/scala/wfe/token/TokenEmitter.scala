@@ -13,12 +13,12 @@ trait TokenEmitter[N <: FlowNode] {
   def emitTokens(existingTokens: Seq[Token[_]], to: ActorRef)
 
   def sendAndDestroyTokens(existingTokens: Seq[Token[_]], targets: Iterable[SequenceFlow], to: ActorRef) = {
-    // Send existing tokens to targets
     existingTokens.zip(targets).foreach {
       case (token, target) =>
         to ! OutgoingToken(token, target.getId)
     }
-    // Create new tokens for example if there are one imcoming and multiple outgoing sequenceflow
+    //m token and n targets, was passiert bei n > m, n = m, m > n
+    // Create new tokens for example if there are one incoming and multiple outgoing sequenceflow
     //create copies of tokens
     //pa you have 5 targets and 2 tokens: first two targets will be dropped and creates 3 new tokens
     targets.drop(existingTokens.size).foreach { target =>

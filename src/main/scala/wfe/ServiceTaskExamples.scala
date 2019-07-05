@@ -37,6 +37,21 @@ object PrintSmallerThenSix extends Evaluation {
   }
 }
 
+
+object PrintGreaterThanHundred extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        s.state.get("a") match {
+          case Some(i: Int) => println("a is greater than 100")
+          case _ => throw new RuntimeException("a has wrong type or is not set")
+        }
+        Token(id, s)
+      case t: Token[_] => t
+    }
+  }
+}
+
 object IncreaseBy3 extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
@@ -66,6 +81,18 @@ object SetToSix extends Evaluation {
   }
 }
 
+object SetToFive extends Evaluation {
+  override def apply(token: Token[_]): Token[_] = {
+    token match {
+      case Token(id, s: Tok.State) =>
+        println("a set to 5")
+        Token(id, Tok.State(s.state.updated("a", 5)))
+
+
+      case t: Token[_] => t
+    }
+  }
+}
 
 object SetToSixB extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
@@ -272,7 +299,7 @@ object SetToStringTest extends Evaluation {
   override def apply(token: Token[_]): Token[_] = {
     token match {
       case Token(id, s: Tok.State) =>
-        var test = "testttt"
+        var test = "testtttt"
         println(s"String set to '$test")
 
         Token(id, Tok.State(s.state.updated("s", test)))

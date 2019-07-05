@@ -12,6 +12,7 @@ trait UnconditionalTokenEmitter extends TokenEmitter[FlowNode] {
   def emitTokens(existingTokens: Seq[Token[_]], to: ActorRef) = {
     val targets = node.getOutgoing.asScala
     //case: join gateway: one output, multiply inputs
+    // does not matter
     if (targets.size == 1 && node.getIncoming.size() > 1) {
       var keySet = scala.collection.mutable.Set[String]()
       var conflicted = scala.collection.mutable.Set[String]()

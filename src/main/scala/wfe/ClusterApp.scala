@@ -19,7 +19,7 @@ object ClusterApp extends App {
 
   system.scheduler.scheduleOnce(5 second) {
     if (cluster.selfAddress.equals(cluster.state.getLeader)) {
-      val processAsString = Source.fromResource("orJoin.xml").mkString
+      val processAsString = Source.fromResource("test2.xml").mkString
       val processManager = system.actorOf(Props(classOf[Processes]), "processmanager")
       processManager ! Processes.CreateProcess(Props(classOf[ProcessInstanceActor], "1", processAsString), "process1")
     }

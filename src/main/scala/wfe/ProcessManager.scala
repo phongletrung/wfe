@@ -38,9 +38,7 @@ object ProcessManager {
   //
   //
   object Processes {
-
     case class CreateProcess(props: Props, name: String)
-
   }
 
   class Processes extends Actor with ActorLogging {
