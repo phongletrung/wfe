@@ -9,11 +9,19 @@ modeled in BPMN distributed with Akka Clustering, Remoting and Docker.
 The XML files _thesisExample1.xml_ and _thesisExample2.xml_ are the one explained in my master thesis.
 
 ---
-**Prerequisites**
+## Requirements
 
-maven, Docker, sbt, Scala, Java, Akka
+You need the following tools:
+  - Java SDK. 
+  - sbt (sbt is a build tool for Scala, Java, and more.
+        For general documentation, see http://www.scala-sbt.org/.)
 
-**How to deploy**
+## Tools which are used
+
+  - [Docker](https://docs.docker.com/install/)
+  - [IntelliJ IDEA](https://www.jetbrains.com/idea/download/)
+
+##How to deploy
 
 
 **_Run locally:_**
