@@ -24,7 +24,7 @@ You need the following tools:
 ##How to deploy
 
 
-**_Run locally:_**
+**_Run on one machine:_**
 
 Run the `ClusterApp`.
 
