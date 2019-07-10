@@ -6,7 +6,7 @@ Goal
 Implemententing a prototype of a workflow/process engine, which can execute business process
 modeled in BPMN distributed with Akka Clustering, Remoting and Docker.
 
-The XML files _thesisExample1.xml_ and _thesisExample2.xml_ are the one explained in my master thesis.
+The XML files _thesisExample1.xml_ and _thesisExample2.xml_ are the one explained in my master thesis, the _test2.xml_ is the alternative to explained in the Evaluation part
 
 ---
 ## Requirements
