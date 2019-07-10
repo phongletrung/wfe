@@ -4,7 +4,7 @@
 		module="workflowengine-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20190705145052"
+		publication="20190705150040"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>

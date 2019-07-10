@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62a30412-7eff-4983-86f6-dad6612269a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/thesisExample1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/thesisExample2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/workflowengine-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterDir="false" />
@@ -30,25 +25,6 @@
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/orJoin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/orJoin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parallelJoin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/parallelJoin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rekursionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rekursionTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/ClusterApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/ClusterApp.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/ClusterListener.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/ClusterListener.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/ClusteringConfig.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/ClusteringConfig.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/ProcessInstanceActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/ProcessInstanceActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/ProcessManager.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/ProcessManager.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/ServiceTaskExamples.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/ServiceTaskExamples.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/flownodes/ExclusiveGatewayActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/flownodes/ExclusiveGatewayActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/flownodes/ParallelGatewayActor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/flownodes/ParallelGatewayActor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/token/ExclusiveTokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/token/ExclusiveTokenEmitter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/token/InclusiveTokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/token/InclusiveTokenEmitter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/token/TokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/token/TokenEmitter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/wfe/token/UnconditionalTokenEmitter.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/wfe/token/UnconditionalTokenEmitter.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test-process1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/wfe/ProcessInstanceSpec.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/wfe/flownodes/ServiceTaskSpec.scala" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -155,12 +131,12 @@
         <counts>
           <entry key="conf" value="161" />
           <entry key="gitignore" value="30" />
-          <entry key="md" value="684" />
+          <entry key="md" value="804" />
           <entry key="sbt" value="137" />
           <entry key="sbtShell" value="7" />
           <entry key="scala" value="18409" />
           <entry key="thesisExample2" value="1" />
-          <entry key="txt" value="511" />
+          <entry key="txt" value="556" />
           <entry key="xml" value="120" />
           <entry key="yml" value="16" />
         </counts>
@@ -168,8 +144,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HOCON" value="161" />
-          <entry key="Markdown" value="684" />
-          <entry key="PLAIN_TEXT" value="541" />
+          <entry key="Markdown" value="804" />
+          <entry key="PLAIN_TEXT" value="586" />
           <entry key="Scala" value="18409" />
           <entry key="XML" value="121" />
           <entry key="YAML" value="16" />
@@ -242,8 +218,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="60">
-                <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+              <first_editor relative-caret-position="282">
+                <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
               </first_editor>
               <second_editor />
             </state>
@@ -410,7 +386,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
@@ -437,6 +413,9 @@
           </State>
           <State>
             <id>PerformanceLintAndroid</id>
+          </State>
+          <State>
+            <id>sbt</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -542,13 +521,13 @@
     <property name="SearchEverywhereHistoryKey" value="line comment&#9;ACTION&#9;CommentByLineComment" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562331535806" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562333263963" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -748,7 +727,7 @@
       <workItem from="1559238686910" duration="24669000" />
       <workItem from="1560411493717" duration="24596000" />
       <workItem from="1561497232007" duration="3303000" />
-      <workItem from="1562321259502" duration="2193000" />
+      <workItem from="1562321259502" duration="5016000" />
     </task>
     <task id="LOCAL-00001" summary="dda">
       <created>1551458892237</created>
@@ -918,7 +897,28 @@
       <option name="project" value="LOCAL" />
       <updated>1559127065839</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="readme and new business process added">
+      <created>1562331416243</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1562331416244</updated>
+    </task>
+    <task id="LOCAL-00026" summary="readme and new business process added">
+      <created>1562331603347</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1562331603347</updated>
+    </task>
+    <task id="LOCAL-00027" summary="readme">
+      <created>1562333270712</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1562333270712</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -954,7 +954,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324217000" />
+    <option name="totallyTimeSpent" value="327040000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -966,7 +966,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7288136" side_tool="true" visible="true" weight="0.2811159" />
@@ -1109,7 +1109,9 @@
     <MESSAGE value="tests fail" />
     <MESSAGE value="remove processdefactor" />
     <MESSAGE value="fix some warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some warnings" />
+    <MESSAGE value="readme and new business process added" />
+    <MESSAGE value="readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1294,6 +1296,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <element signature="e#13#52#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1510,8 +1515,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <first_editor relative-caret-position="282">
+            <caret line="23" column="15" lean-forward="true" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
           </first_editor>
           <second_editor />
         </state>

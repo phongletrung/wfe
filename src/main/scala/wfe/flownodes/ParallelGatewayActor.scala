@@ -26,7 +26,7 @@ class ParallelGatewayActor(val nodeId: String, val process: String) extends Acto
       val headTokenOptions = tokenBuffers.map(_._2.headOption)
       //checks if there is one token for each incoming sequence flow (important for merge because if it is a split)
       if (headTokenOptions forall (_.isDefined)) {
-        log.info("We have a token on every incoming sequence flow!")
+        log.info("Every incoming sequence flow received a token!")
         val tokens = headTokenOptions.map(_.get)
         tokenBuffers = tokenBuffers mapValues (_.tail)
         emitTokens(tokens.toSeq, sender)
